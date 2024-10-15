@@ -1,0 +1,68 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* عرض عمودين للتابلت */
+    justify-items: center; /* محاذاة العناصر في المنتصف */
+  }
+
+  .custom-container {
+    width: 100%; /* استخدام 100% للحفاظ على عرض العنصر بالكامل */
+    height: auto; /* دع الارتفاع يكون ديناميكي */
+  }
+}
+
+@media (max-width: 576px) {
+  .card-container {
+    grid-template-columns: 1fr; /* عرض عمود واحد للهواتف */
+    justify-items: center; /* محاذاة العناصر في المنتصف */
+  }
+
+  .custom-container {
+    width: 100%; /* عرض كامل على الهواتف */
+    height: auto; /* دع الارتفاع يكون ديناميكي */
+  }
+
+  .center-button {
+    margin: 10px; /* تقليل الهامش على الهواتف */
+    justify-content: center; /* محاذاة الزر في المنتصف */
+  }
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #3f51b5;
+  transform: scale(1.05);
+}
+
+.center-button button {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.center-button button:hover {
+  background-color: #3f51b5;
+  transform: scale(1.05);
+}
+
+.card-solution {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-solution:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
