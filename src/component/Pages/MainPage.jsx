@@ -31,10 +31,10 @@ const MainPage = () => {
         {" "}
         <About />
       </div> */}
-      <div className="mb-3 mt-2">
+      {/* <div className="mb-3 mt-2">
         {" "}
         <Services />
-      </div>
+      </div> */}
       {/* <div className="mt-4">
         <WorkShop />
       </div> */}
@@ -43,7 +43,7 @@ const MainPage = () => {
         {" "}
         <ProductUr />
       </div> */}
-      <div className="pt-4" style={{ backgroundColor: "#eee" }}>
+      {/* <div className="pt-4" style={{ backgroundColor: "#eee" }}>
         {" "}
         <Solution />
       </div>
@@ -52,7 +52,7 @@ const MainPage = () => {
       </div>
       <div style={{ backgroundColor: "#eee" }}>
         <Event />
-      </div>
+      </div> */}
       <div style={{ backgroundColor: "#ececec" }} className="pb-4">
         {" "}
         <Contact />

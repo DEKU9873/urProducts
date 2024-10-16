@@ -19,24 +19,35 @@ import OpenProjectById from "./component/Pages/Project/OpenProjectById.jsx";
 import AllSolution from "./component/Pages/OurSolution/AllSolution.jsx";
 import ProductsPage from "./component/Pages/ProductUr/DetailsProduct.jsx";
 import ProductUr from "./component/Pages/ProductUr/ProductUr.jsx";
+import Header from "./component/Pages/Header/Header.jsx";
+import Project from "./component/Pages/Project/Project.jsx";
+import Event from "./component/Pages/Event/Event.jsx";
+import Solution from "./component/Pages/OurSolution/Solution.jsx";
+import Services from "./component/Pages/services/Services.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
-      <Route index element={<MainPage />} />
-      <Route path="/AboutDetails" element={<AboutDetails />} />
-      <Route path="/EventDetails/:id" element={<EventDetails />} />
-      <Route path="/ProductList/:id" element={<ProductList />} />
-      <Route path="/ProductDetails/:id" element={<ProductDetails />} />
-      <Route path="/SitemapManager" element={<SitemapManager />} />
-      <Route path="/ViewAllProject" element={<ViewAllProject />} />
-      <Route path="/project/ProjectDetails/:id" element={<OpenProjectById />} />
-      <Route path="/AllSolution" element={<AllSolution />} />
-      <Route path="/products/:categoryId" element={<ProductsPage />} />
-      <Route path="/products/" element={<ProductUr />} />
+      {/* هنا نضيف الـ Header داخل الـ Root ليظهر في كل الصفحات */}
+      <Route index element={<><Header /><MainPage /></>} />
+      <Route path="/AboutDetails" element={<><Header /><AboutDetails /></>} />
+      <Route path="/EventDetails/:id" element={<><Header /><EventDetails /></>} />
+      <Route path="/ProductList/:id" element={<><Header /><ProductList /></>} />
+      <Route path="/ProductDetails/:id" element={<><Header /><ProductDetails /></>} />
+      <Route path="/SitemapManager" element={<><Header /><SitemapManager /></>} />
+      <Route path="/ViewAllProject" element={<><Header /><ViewAllProject /></>} />
+      <Route path="/project/ProjectDetails/:id" element={<><Header /><OpenProjectById /></>} />
+      <Route path="/AllSolution" element={<><Header /><AllSolution /></>} />
+      <Route path="/products/:categoryId" element={<><Header /><ProductsPage /></>} />
+      <Route path="/products/" element={<><Header /><ProductUr /></>} />
+      <Route path="/Services/" element={<><Header /><Services /></>} />
+      <Route path="/Solution/" element={<><Header /><Solution /></>} />
+      <Route path="/Project/" element={<><Header /><Project /></>} />
+      <Route path="/Eventpage/" element={<><Header /><Event /></>} />
     </Route>
   )
 );
+
 function App() {
   const [loading, setloading] = useState(true);
   useEffect(() => {

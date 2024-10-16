@@ -63,9 +63,9 @@ function Header() {
         <h1 className="logo">
          
 
-          <a href="#">
+          <a href="/">
             <img
-              src="image/logoSystem.png"
+              src="/image/logoSystem.png"
               alt="No Image"
               width={"50px"}
               height={"50px"}
@@ -106,9 +106,9 @@ function Header() {
           </div>
         </nav>
 
-        <a href="#">
+        <a href="/">
             <img
-              src="image/IMG_7796 (1).png"
+              src="/image/IMG_7796 (1).png"
               alt="No Image"
               width={"80px"}
               height={"50px"}
@@ -125,7 +125,7 @@ function Header() {
             style={{ color: "white" }}
           >
             <img
-              src="image/lang_logo.png"
+              src="/image/lang_logo.png"
               alt="No Image"
               width={"50px"}
               height={"50px"}

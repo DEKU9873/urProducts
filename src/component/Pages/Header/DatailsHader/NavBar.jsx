@@ -32,7 +32,7 @@ function NavBar() {
     <>
       <ul dir={currentLanguage === "ar" ? "rtl" : "ltr"}>
         <li>
-          <a className="nav-link scrollto active" href="#hero">
+          <a className="nav-link scrollto active" href="/">
             {t("header.Home")}
           </a>
         </li>
@@ -43,13 +43,13 @@ function NavBar() {
         </li> */}
         
         <li>
-          <a className="nav-link scrollto" href="#services">
+          <a className="nav-link scrollto" href="/Services/">
             {t("header.Services")}
           </a>
         </li>
         
         <li>
-          <a className="nav-link scrollto" href="#solution">
+          <a className="nav-link scrollto" href="/Solution/">
             {t("header.Oursolution")}
           </a>
         </li>
@@ -57,13 +57,13 @@ function NavBar() {
         
 
         <li>
-          <a className="nav-link scrollto" href="#Project">
+          <a className="nav-link scrollto" href="/Project/">
             {t("header.OurProject")}
           </a>
         </li>
 
         <li>
-          <a className="nav-link scrollto" href="#Event">
+          <a className="nav-link scrollto" href="/Eventpage/">
             {t("header.OurEvent")}
           </a>
         </li>

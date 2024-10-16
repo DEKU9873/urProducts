@@ -45,22 +45,22 @@ function Sidbar() {
           style={{ backgroundColor: "white" }}
         >
           <li className="p-3">
-            <a href="#hero">{t("header.Home")}</a>
+            <a href="/">{t("header.Home")}</a>
           </li>
-          <li className="p-3">
+          {/* <li className="p-3">
             <a href="#about">{t("header.About")}</a>
+          </li> */}
+          <li className="p-3">
+            <a href="/Services/">{t("header.Services")}</a>
           </li>
           <li className="p-3">
-            <a href="#services">{t("header.Services")}</a>
+            <a href="/Solution/">{t("header.Oursolution")}</a>
           </li>
           <li className="p-3">
-            <a href="#solution">{t("header.Oursolution")}</a>
-          </li>
-          <li className="p-3">
-            <a href="#Project">{t("header.OurProject")}</a>
+            <a href="/Project/">{t("header.OurProject")}</a>
           </li>
           <li className="p-3 Dropdown">
-            <a href="#Event">{t("header.OurEvent")}</a>
+            <a href="/Eventpage/">{t("header.OurEvent")}</a>
           </li>
           <li className="p-3 Dropdown">
             <a href="/products/">{t("header.product")}</a>
