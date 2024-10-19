@@ -15,7 +15,17 @@ function AllSolution() {
     <div>
       <section id="solution">
         <div className="container" data-aos="fade-up">
-          <div className=" mb-3">
+          <div className=" ">
+          <div className="section-title ">
+            <div className="d-flex justify-content-center mb-3 ">
+              <h2>
+                <a href="#" className="mb-3">
+                  {" "}
+                  {t("Oursolution.title")}
+                </a>
+              </h2>
+            </div>
+          </div>
             
           </div>
 
@@ -32,9 +42,7 @@ function AllSolution() {
             <CardSolution  />
             <CardSolution  />
             <CardSolution  />
-            <CardSolution  />
-            <CardSolution  />
-            <CardSolution  />
+            
 
             <div className=" mb-3">
             

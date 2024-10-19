@@ -36,7 +36,7 @@ const ProductUr = () => {
       <section id="Product">
         <div className="container" data-aos="fade-up">
           <div className="section-title mb-3">
-            <div className="d-flex justify-content-center mb-3">
+            <div className="d-flex justify-content-center ">
               <h2>
                 <a href="#" className="mb-3">
                   {t("Product.title")}
@@ -45,7 +45,7 @@ const ProductUr = () => {
             </div>
           </div>
 
-          <div className="product-grid">
+          <div className="product-grid mb-5" >
             {products.map((category) => (
               <div key={category.id} className="">
                 <ProductCard

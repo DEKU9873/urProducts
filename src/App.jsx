@@ -24,6 +24,7 @@ import Project from "./component/Pages/Project/Project.jsx";
 import Event from "./component/Pages/Event/Event.jsx";
 import Solution from "./component/Pages/OurSolution/Solution.jsx";
 import Services from "./component/Pages/services/Services.jsx";
+import HomeCategory from "./component/Pages/Clints/ClintDetails.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -44,6 +45,8 @@ const router = createBrowserRouter(
       <Route path="/Solution/" element={<><Header /><Solution /></>} />
       <Route path="/Project/" element={<><Header /><Project /></>} />
       <Route path="/Eventpage/" element={<><Header /><Event /></>} />
+      <Route path="/Clints/" element={<><Header /><HomeCategory /></>} />
+      <Route path="/Clints/" element={<><Header /><HomeCategory /></>} />
     </Route>
   )
 );

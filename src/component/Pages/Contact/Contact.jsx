@@ -106,6 +106,7 @@ function Contact() {
                   <ColorButton
                     variant="contained"
                     onClick={() => handelContact()}
+                    style={{background:"#0080ff"}}
                   >
                     Submit{" "}
                   </ColorButton>

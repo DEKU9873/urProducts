@@ -13,6 +13,7 @@ import Event from "./Event/Event.jsx";
 import Project from "./Project/Project.jsx";
 import Solution from "./OurSolution/Solution.jsx";
 import ProductUr from "./ProductUr/ProductUr.jsx";
+import HomeCategory from "./Clints/ClintDetails.jsx";
 
 const MainPage = () => {
   return (
@@ -24,6 +25,8 @@ const MainPage = () => {
         <Home />
         
       </div>
+
+      
       {/* <div
         className="pb-5 pt-5 backImageAbout"
         style={{ backgroundColor: "#eee" }}

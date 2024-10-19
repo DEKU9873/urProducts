@@ -51,17 +51,12 @@
 }
 
 /* Media Query for smaller screens */
-@media (max-width: 768px) {
-  .custom-container {
-    width: calc(50% - 15px); /* Set width to 50% for tablets and small screens */
-    height: auto; /* Let the height be dynamic */
-  }
-}
 
-@media (max-width: 576px) {
+
+@media (max-width: 1200px) {
   .custom-container {
     width: 100%; /* Full width for mobile devices */
-    height: auto; /* Let the height be dynamic */
+    height: 120px; /* Let the height be dynamic */
   }
 
   .custom-image {
@@ -76,4 +71,17 @@
   .custom-text p {
     font-size: 0.9rem; /* Adjust the font size for smaller screens */
   }
+}
+
+
+.swiper-button-next {
+  right: 20px; /* تعديل الموقع من اليمين */
+  top: 50%; /* وضع السهم في منتصف الشرائح عموديًا */
+  transform: translateX(-40%); /* لضبط المحاذاة العمودية */
+}
+
+.swiper-button-prev {
+  left: 20px; /* تعديل الموقع من اليسار */
+  top: 50%; /* وضع السهم في منتصف الشرائح عموديًا */
+  transform: translateX(40%); /* لضبط المحاذاة العمودية */
 }

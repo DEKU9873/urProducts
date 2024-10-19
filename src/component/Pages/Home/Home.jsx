@@ -12,7 +12,7 @@ function Home() {
   return (
     <section id="hero" className="" >
       <video autoPlay muted loop id="myVideo">
-        <source src="Video/video.mp4" type="video/mp4" />
+        <source src="video/video.mp4" type="video/mp4" />
       </video>
       <div className="container-fluid" data-aos="fade-up">
         <div className="row justify-content-center">

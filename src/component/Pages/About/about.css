@@ -213,7 +213,7 @@
   --------------------------------------------------------------*/
   .section-title {
     text-align: center;
-    padding-bottom: 60px;
+    padding-bottom: 6px;
     position: relative;
   }
   
@@ -223,6 +223,7 @@
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
+    margin-top: 100px;
   }
   
   .section-title h2:after {
@@ -241,3 +242,18 @@
   .section-title p {
     margin-bottom: 0;
   }
+
+  .section-title a {
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hi{
+
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  }
+  

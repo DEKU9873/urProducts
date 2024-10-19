@@ -1,7 +1,9 @@
 .card-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  cursor: pointer;
+  
 }
 
 @media (max-width: 768px) {
@@ -25,6 +27,7 @@
   .custom-container {
     width: 100%; /* عرض كامل على الهواتف */
     height: auto; /* دع الارتفاع يكون ديناميكي */
+    
   }
 
   .center-button {
@@ -60,6 +63,8 @@ button:hover {
 
 .card-solution {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #ff6ec4, #7873f5) 1;
 }
 
 .card-solution:hover {

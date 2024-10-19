@@ -48,8 +48,13 @@ function NavBar() {
           </a>
         </li>
         
-        <li>
+        {/* <li>
           <a className="nav-link scrollto" href="/Solution/">
+            {t("header.Oursolution")}
+          </a>
+        </li> */}
+        <li>
+          <a className="nav-link scrollto" href="/AllSolution/">
             {t("header.Oursolution")}
           </a>
         </li>
@@ -57,7 +62,7 @@ function NavBar() {
         
 
         <li>
-          <a className="nav-link scrollto" href="/Project/">
+          <a className="nav-link scrollto" href="/ViewAllProject/">
             {t("header.OurProject")}
           </a>
         </li>
@@ -71,6 +76,11 @@ function NavBar() {
         <li>
           <a className="nav-link scrollto" href="/products/">
             {t("header.product")}
+          </a>
+        </li>
+        <li>
+          <a className="nav-link scrollto" href="/Clints/">
+            {t("header.OurClinents")}
           </a>
         </li>
 

@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import DetailsCard from "./DetailsCard"; 
 import "./productUr.css";
+import { useTranslation } from "react-i18next";
+
 
 
 const ProductsPage = () => {
@@ -10,6 +12,9 @@ const ProductsPage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { t } = useTranslation();
+  
+
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -47,10 +52,21 @@ const ProductsPage = () => {
   return (
     
         
-    <div className="mx-4 mt-4">
-      <div className="products-list ">
+    <div className="mx-4 mt-4" >
+      <div className="section-title ">
+            <div className="d-flex justify-content-center ">
+              <h2>
+                <a href="#" className="">
+                  {t("Product.title")}
+                </a>
+              </h2>
+            </div>
+          </div>
+
+      <div className="products-list mb-5 " >
         
         {products.map((product) => (
+
           <DetailsCard key={product.id} product={product} /> 
         ))}
       </div>

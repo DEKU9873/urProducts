@@ -125,7 +125,7 @@ function Header() {
             style={{ color: "white" }}
           >
             <img
-              src="/image/lang_logo.png"
+              src="/image/language.png"
               alt="No Image"
               width={"50px"}
               height={"50px"}
@@ -146,7 +146,7 @@ function Header() {
               },
             }}
           >
-            <MenuItem onClick={handleDirectionArabic}>Arabic</MenuItem>
+            <MenuItem onClick={handleDirectionArabic}>العربية</MenuItem>
             <MenuItem onClick={handleDirectionEnglish}>English</MenuItem>
           </Menu>
         </div>

@@ -1,101 +1,105 @@
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./services.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGear,
-  faRotate,
-  faWandMagicSparkles,
-} from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
+import "./services.css";
+
 function Services() {
+  const { t, i18n } = useTranslation(); // Added i18n to get current language
+  const [services, setServices] = useState([]);
+  const [isArabic, setIsArabic] = useState(i18n.language === "ar"); // Set initial state based on current language
+
+  // Function to simulate fetching data
+  const fetchServiceData = async () => {
+    const fakeServicesData = [
+      {
+        id: 1,
+        name: "Web Development",
+        name_ar: "تطوير المواقع",
+        image: "/image/app.png",
+      },
+      {
+        id: 2,
+        name: "Graphic Design",
+        name_ar: "تصميم جرافيك",
+        image: "/image/service.png",
+      },
+      {
+        id: 3,
+        name: "Digital Marketing",
+        name_ar: "التسويق الرقمي",
+        image: "/image/database.png",
+      },
+      {
+        id: 4,
+        name: "Digital Marketing",
+        name_ar: "التسويق الرقمي",
+        image: "/image/app.png",
+      },
+      {
+        id: 5,
+        name: "Digital Marketing",
+        name_ar: "التسويق الرقمي",
+        image: "/image/service.png",
+      },
+      {
+        id: 6,
+        name: "Digital Marketing",
+        name_ar: "التسويق الرقمي",
+        image: "/image/database.png",
+      },
+    ];
+
+    setServices(fakeServicesData); // Set fake data into state
+  };
+
   useEffect(() => {
-    AOS.init();
+    fetchServiceData(); // Simulate API call on component mount
   }, []);
-  const { t } = useTranslation();
+
+  useEffect(() => {
+    setIsArabic(i18n.language === "ar"); // Update state when language changes
+  }, [i18n.language]);
+
+  if (!services.length) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <div>
-      <section
-        id="services"
-        className="services section-bg d-flex justify-content-center align-item-center"
-      >
-        <div className="container" data-aos="fade-up">
-          <div className="section-title mb-3">
-            <div className="d-flex justify-content-center mb-3 ">
-              <h2>
-                <a href="#" className="mb-3">
-                  {" "}
-                  {t("Services.title")}
-                </a>
-              </h2>
-            </div>
-          </div>
-          <div className="row gy-4">
-            <div
-              className="col-lg-4 col-md-6 d-flex align-items-stretch"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div className="icon-box iconbox-blue">
-                <div className="icon">
-                  <i>
-                    <FontAwesomeIcon
-                      icon={faGear}
-                      style={{ color: "#450061fe" }}
-                    />{" "}
-                  </i>
-                </div>
-                <h4>
-                  <a href=""> {t("Services.Maintenance")}</a>
-                </h4>
-                <p>{t("Services.MaintenanceText")}</p>
-              </div>
-            </div>
-            <div
-              className="col-lg-4 col-md-6 d-flex align-items-stretch"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div className="icon-box iconbox-orange ">
-                <div className="icon">
-                  <i>
-                    <FontAwesomeIcon
-                      icon={faWandMagicSparkles}
-                      style={{ color: "#450061fe" }}
-                    />{" "}
-                  </i>
-                </div>
-                <h4>
-                  <a href="">{t("Services.Installation")}</a>
-                </h4>
-                <p>{t("Services.InstallationText")}</p>
-              </div>
-            </div>
-            <div
-              className="col-lg-4 col-md-6 d-flex align-items-stretch"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
-              <div className="icon-box iconbox-pink">
-                <div className="icon">
-                  <i>
-                    <FontAwesomeIcon
-                      icon={faRotate}
-                      style={{ color: "#450061fe" }}
-                    />
-                  </i>
-                </div>
-                <h4>
-                  <a href="">{t("Services.Supplying")}</a>
-                </h4>
-                <p>{t("Services.SupplyingText")}</p>
-              </div>
-            </div>
-          </div>
+    <section id="services" className={`services-section ${isArabic ? 'text-right' : ''}`}>
+      <div className="services-container" data-aos="fade-up">
+        <div className="d-flex justify-content-center mb-3 " style={{marginTop:"100px"}}>
+          <h2>
+            <a href="#" className="mb-3 hi"  >
+              {" "}
+              {t("Services.title")}
+            </a>
+          </h2>
         </div>
-      </section>
-    </div>
+        <div className="services-grid-container">
+          {services.map((service) => (
+            <ServiceCard
+              key={service.id}
+              title={isArabic ? service.name_ar : service.name}
+              image={service.image} // Pass the fake image URL
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
+
+const ServiceCard = ({ title, image }) => (
+  <div className="services-card" data-aos="zoom-in">
+    <div className="services-image-container">
+      <img src={image} alt={title} className="services-image" /> {/* Render image from fake data */}
+    </div>
+    <div className="services-card-content">
+      <p className="services-card-title">{title}</p>
+    </div>
+    <div className="services-underline"></div>
+  </div>
+);
+
 export default Services;

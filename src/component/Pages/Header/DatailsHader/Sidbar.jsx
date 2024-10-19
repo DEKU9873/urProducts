@@ -53,8 +53,11 @@ function Sidbar() {
           <li className="p-3">
             <a href="/Services/">{t("header.Services")}</a>
           </li>
-          <li className="p-3">
+          {/* <li className="p-3">
             <a href="/Solution/">{t("header.Oursolution")}</a>
+          </li> */}
+          <li className="p-3">
+            <a href="/AllSolution/">{t("header.Oursolution")}</a>
           </li>
           <li className="p-3">
             <a href="/Project/">{t("header.OurProject")}</a>
@@ -64,6 +67,9 @@ function Sidbar() {
           </li>
           <li className="p-3 Dropdown">
             <a href="/products/">{t("header.product")}</a>
+          </li>
+          <li className="p-3 Dropdown">
+            <a href="/Clints/">{t("header.OurClinents")}</a>
           </li>
           
           {/* <li className="p-3">

@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { ColorButton } from "../Config/contact";
 import { BackendUrl } from "../api/api";
 import "../Style/Style.css";
 import { useTranslation } from "react-i18next";
-import AppBarT from "../Header/AppBar"
+import './Project.css'
 function Project() {
   const [dataProject, setDataProject] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -34,10 +32,6 @@ function Project() {
 
   const navigate = useNavigate();
 
-  const handleViewAllProjects = () => {
-    navigate("/ViewAllProject");
-  };
-
   const openProjectDetails = (id) => {
     navigate(`/project/ProjectDetails/${id}`);
   };
@@ -46,10 +40,10 @@ function Project() {
   const [direction, setDirection] = useState("");
   useEffect(() => {
     setDirection(localStorage.getItem("language"));
-  }, [t, useTranslation]);
+  }, [t]);
+
   return (
     <div>
-      <AppBarT/>
       <div className="Project" id="Project">
         <div className="section-title mb-3">
           <div className="d-flex justify-content-center mb-3">
@@ -60,41 +54,26 @@ function Project() {
             </h2>
           </div>
         </div>
+
         <div className="container" dir={direction === "ar" ? "rtl" : ""}>
           {dataProject.length > 0 ? (
             dataProject.map((item) => (
-              <div className="box" data-aos="zoom-in" key={item.id}>
-                <Button
-                  onClick={() => openProjectDetails(item.id)}
-                  variant="text"
-                  color="secondary"
-                  startIcon={
-                    direction === "ar" ? (
-                      <ArrowForwardIosIcon fontSize="medium" />
-                    ) : null
-                  }
-                  endIcon={
-                    direction !== "ar" ? (
-                      <ArrowForwardIosIcon fontSize="medium" />
-                    ) : null
-                  }
-                  sx={{ fontSize: "20px" }}
-                >
-                  {direction === "ar" ? item.name_ar : item.name}
-                </Button>
-                <div
-                  className="overflow-hidden"
-                  dir={direction === "ar" ? "rtl" : ""}
-                >
-                  {direction === "ar" ? (
-                    <p>{item.description_ar}</p>
-                  ) : (
-                    <p>{item.description}</p>
-                  )}
-                </div>
-                <div>
-                  <ColorButton onClick={() => openProjectDetails(item.id)}>
-                    Read more
+              <div className="custom-card" key={item.id} data-aos="zoom-in">
+                <img
+                  className="custom-card-image"
+                  src={item.image || "https://tecdn.b-cdn.net/wp-content/uploads/2020/06/vertical.jpg"}
+                  alt={direction === "ar" ? item.name_ar : item.name}
+                />
+                <div className="custom-card-content">
+                  <h5 className="custom-card-title">
+                    {direction === "ar" ? item.name_ar : item.name}
+                  </h5>
+                  <p className="custom-card-description"> 
+                    {direction === "ar" ? item.description_ar : item.description}
+                  </p>
+                  <ColorButton className="custom-card-button"   style={{position: 'absolute', bottom: '5px', right:'25%' , width:' 50%'}}  
+                     onClick={() => openProjectDetails(item.id)}>
+                    {t("About.btnRedMore")}
                   </ColorButton>
                 </div>
               </div>
