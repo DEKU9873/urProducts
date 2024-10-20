@@ -71,7 +71,7 @@ function Project() {
                   <p className="custom-card-description"> 
                     {direction === "ar" ? item.description_ar : item.description}
                   </p>
-                  <ColorButton className="custom-card-button"   style={{position: 'absolute', bottom: '5px', right:'25%' , width:' 50%'}}  
+                  <ColorButton className="custom-card-button"   style={{position: 'absolute', bottom: '5px', right:'30%' , width:' 30%' , backgroundColor: '#2E8CF7'}}  
                      onClick={() => openProjectDetails(item.id)}>
                     {t("About.btnRedMore")}
                   </ColorButton>
