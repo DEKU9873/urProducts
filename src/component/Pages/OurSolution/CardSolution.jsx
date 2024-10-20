@@ -6,11 +6,19 @@ const CardSolution = () => {
   return (
     <div>
       <Card className="card-solution" >
+
+        <div>
+
         <CardMedia
-          sx={{ height: 140 }}
-          image="/static/images/cards/contemplative-reptile.jpg"
+          sx={{ height: 140 }} 
+          image="/image/mission.jpg"
           title="green iguana"
+          style={{borderBottom:"2px solid black", width:"100%", height:"200px"}}
+          
         />
+
+        </div>
+        
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Lizard

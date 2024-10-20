@@ -65,6 +65,8 @@ h6 {
 
 .fixed-top {
   background-color: rgba(29, 29, 39, 0.4);
+  /* background: linear-gradient(45deg, rgba(255, 110, 196, 0.5), rgba(120, 115, 245, 0.5)); */
+
 }
 
 #header.header-scrolled,

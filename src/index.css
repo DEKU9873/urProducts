@@ -11,14 +11,8 @@
 }
 
 /* body {
-  margin: 0;
-  padding: 0;
-  background-image: url('../public/backgrounds/background.jpg');
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  height: 100vh;
-  font-family: 'Roboto', sans-serif;
+ background: linear-gradient(45deg, rgba(255, 110, 196, 0.5), rgba(120, 115, 245, 0.5));
+
 } */
 
 a {

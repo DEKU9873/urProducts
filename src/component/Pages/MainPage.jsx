@@ -27,6 +27,8 @@ const MainPage = () => {
       </div>
 
       
+
+      
       {/* <div
         className="pb-5 pt-5 backImageAbout"
         style={{ backgroundColor: "#eee" }}

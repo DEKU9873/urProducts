@@ -89,7 +89,7 @@ function About() {
                   </div>
                 </div>
               </SwiperSlide>
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <div className="custom-container">
                   <div className="custom-content">
                     <div className="custom-text">
@@ -98,7 +98,7 @@ function About() {
                     </div>
                   </div>
                 </div>
-              </SwiperSlide>
+              </SwiperSlide> */}
             </Swiper>
 
             
@@ -129,14 +129,14 @@ function About() {
                   </div>
                 </div>
               </div>
-              <div className="custom-container">
+              {/* <div className="custom-container">
                 <div className="custom-content">
                   <div className="custom-text">
                     <h3>{t("About.subTitle4")}</h3>
                     <p className="fst-italic">{t("About.text4")}</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </>
           )}
         </div>

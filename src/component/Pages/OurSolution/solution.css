@@ -64,7 +64,7 @@ button:hover {
 .card-solution {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid;
-  border-image: linear-gradient(45deg, #ff6ec4, #7873f5) 1;
+  /* border-image: linear-gradient(45deg, #ff6ec4, #7873f5) 1; */
 }
 
 .card-solution:hover {

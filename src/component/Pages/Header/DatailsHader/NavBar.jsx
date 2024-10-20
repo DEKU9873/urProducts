@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Menu, MenuItem } from "@mui/material";
 import { useState } from "react";
 import "./DropDown.css";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const { t, i18n } = useTranslation();
@@ -32,9 +33,10 @@ function NavBar() {
     <>
       <ul dir={currentLanguage === "ar" ? "rtl" : "ltr"}>
         <li>
-          <a className="nav-link scrollto active" href="/">
+          <Link className="nav-link scrollto active" to="/">{t("header.Home")}</Link>
+          {/* <a className="nav-link scrollto active" href="/">
             {t("header.Home")}
-          </a>
+          </a> */}
         </li>
         {/* <li>
           <a className="nav-link scrollto" href="#about">
@@ -43,9 +45,10 @@ function NavBar() {
         </li> */}
         
         <li>
-          <a className="nav-link scrollto" href="/Services/">
+          <Link className="nav-link scrollto" to="/Services/" >{t("header.Services")}</Link>
+          {/* <a className="nav-link scrollto" href="/Services/">
             {t("header.Services")}
-          </a>
+          </a> */}
         </li>
         
         {/* <li>
@@ -54,34 +57,39 @@ function NavBar() {
           </a>
         </li> */}
         <li>
-          <a className="nav-link scrollto" href="/AllSolution/">
+          <Link className="nav-link scrollto" to="/AllSolution/">{t("header.Oursolution")}</Link>
+          {/* <a className="nav-link scrollto" href="/AllSolution/">
             {t("header.Oursolution")}
-          </a>
+          </a> */}
         </li>
 
         
 
         <li>
-          <a className="nav-link scrollto" href="/ViewAllProject/">
+          <Link className="nav-link scrollto" to="/ViewAllProject/">{t("header.OurProject")}</Link>
+          {/* <a className="nav-link scrollto" href="/ViewAllProject/">
             {t("header.OurProject")}
-          </a>
+          </a> */}
         </li>
 
         <li>
-          <a className="nav-link scrollto" href="/Eventpage/">
+          <Link className="nav-link scrollto" to="/Eventpage/">{t("header.OurEvent")}</Link>
+          {/* <a className="nav-link scrollto" href="/Eventpage/">
             {t("header.OurEvent")}
-          </a>
+          </a> */}
         </li>
 
         <li>
-          <a className="nav-link scrollto" href="/products/">
+          <Link className="nav-link scrollto" to="/products/">{t("header.product")}</Link>
+          {/* <a className="nav-link scrollto" href="/products/">
             {t("header.product")}
-          </a>
+          </a> */}
         </li>
         <li>
-          <a className="nav-link scrollto" href="/Clints/">
+          <Link className="nav-link scrollto" to="/Clints/">{t("header.OurClinents")}</Link>
+          {/* <a className="nav-link scrollto" href="/Clints/">
             {t("header.OurClinents")}
-          </a>
+          </a> */}
         </li>
 
         <li className="custom-dropdown">
