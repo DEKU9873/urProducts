@@ -10,7 +10,9 @@
     "Oursolution":"Our Solutions",
     "SendaMassage": " Send a Massage ",
     "OurLink": " Our Link ",
-    "OurClinents": " Our Clients "
+    "OurClinents": " Our Clients ",
+    "Week": "New Week"
+
   },
   "Home": {
     "title": "WELCOME TO UR PRODUCTS",
@@ -65,7 +67,9 @@
     "title": "Our Project"
   },
   "Event": {
-    "title": "Our Event"
+    "title": "Our Event",
+    "visits": "Visits",
+    "exibits": "Exibits"
   },
   "Product": {
     "title": "Our Product"

@@ -10,7 +10,8 @@
     "Oursolution":"حلولنا",
     "SendaMassage": "ارسل رسالة ",
     "OurLink": " روابطنا ",
-    "OurClinents": " عملائنا "
+    "OurClinents": " عملائنا ",
+    "Week": "جديد الاسبوع "
   },
   "Home": {
     "title": "مرحبا بكم في منتجات أور",
@@ -65,7 +66,9 @@
     "title": "مشاريعنا "
   },
   "Event": {
-    "title": "فعالياتنا"
+    "title": "فعالياتنا",
+    "visits": "وفود",
+    "exibits": "معارض"
   },
   "Product": {
     "title": "منتجاتنا"

@@ -14,6 +14,9 @@ import Project from "./Project/Project.jsx";
 import Solution from "./OurSolution/Solution.jsx";
 import ProductUr from "./ProductUr/ProductUr.jsx";
 import HomeCategory from "./Clints/ClintDetails.jsx";
+import Week from "./week/weak.jsx";
+import DisplayFutureCard from "./Future/Future.jsx";
+import FutureDetails from "./Future/Future.jsx";
 
 const MainPage = () => {
   return (
@@ -25,6 +28,13 @@ const MainPage = () => {
         <Home />
         
       </div>
+
+      <div>
+        <Week />
+        
+      </div>
+      
+      
 
       
 

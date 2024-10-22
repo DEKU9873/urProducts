@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Event.css";
+import "./Exhibits.css";
 import { Button, responsiveFontSizes } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { ColorButton } from "../Config/contact";
@@ -10,7 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BackendUrl } from "../api/api";
 import { ArrowRightAlt } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
-function Event() {
+function Exhibits() {
   const [Data, setDataEvent] = useState([]);
   useEffect(() => {
     AOS.init();
@@ -43,7 +43,7 @@ function Event() {
             <h2>
               <a href="#" className="mb-3">
                 {" "}
-                {t("Event.visits")}
+                {t("Event.exibits")}
               </a>
             </h2>
           </div>
@@ -76,7 +76,7 @@ function Event() {
                         : item.description}
                     </p>
                     <div className="read-more">
-                      <Link to={`/EventDetails/${item.id}`}>
+                      <Link to={`/ExhibitsDetails/${item.id}`}>
                         {direction === "ar" ? "قرأة المزيد" : "Read more"}
                         <ArrowRightAlt />
                       </Link>
@@ -96,4 +96,4 @@ function Event() {
   );
 }
 
-export default Event;
+export default Exhibits;
