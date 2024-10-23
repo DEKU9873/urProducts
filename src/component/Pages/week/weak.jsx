@@ -39,7 +39,7 @@ function Week() {
 
   const imgStyle = {
     width: '100%', // Set images to 80% of the container width
-    maxHeight: '600px', // Set a max height for smaller images
+    maxHeight: '450px', // Set a max height for smaller images
     objectFit: 'hidden', // Ensure images cover the area without distortion
     margin: '0 auto', // Center images in the slider
   };
@@ -64,7 +64,7 @@ function Week() {
 
 
   return (
-    <div className="we-help-section m-4 p-4 contact section-bg">
+    <div className="" style={{backgroundColor:"#ececec"}}>
          <div className="section-title ">
           <div className="d-flex justify-content-center  ">
             <h2>

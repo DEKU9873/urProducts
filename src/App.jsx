@@ -28,6 +28,9 @@ import HomeCategory from "./component/Pages/Clints/ClintDetails.jsx";
 import FutureDetails from "./component/Pages/Future/Future.jsx";
 import Exhibits from "./component/Pages/Exhibits/Exhibits.jsx";
 import ExhibitsDetails from "./component/Pages/Exhibits/ExhibitsDetails.jsx";
+import WorkShop from "./component/Pages/WorkShob/WorkSH.jsx";
+import WorkshopUr from "./component/Pages/WorkshopUr/WorkshopUr.jsx";
+import WorkshopUrDetails from "./component/Pages/WorkshopUr/WorkshopUrDetails.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -37,6 +40,7 @@ const router = createBrowserRouter(
       <Route path="/AboutDetails" element={<><Header /><AboutDetails /></>} />
       <Route path="/EventDetails/:id" element={<><Header /><EventDetails /></>} />
       <Route path="/ExhibitsDetails/:id" element={<><Header /><ExhibitsDetails /></>} />
+      <Route path="/Training/:id" element={<><Header /><WorkshopUrDetails /></>} />
       <Route path="/ProductList/:id" element={<><Header /><ProductList /></>} />
       <Route path="/ProductDetails/:id" element={<><Header /><ProductDetails /></>} />
       <Route path="/SitemapManager" element={<><Header /><SitemapManager /></>} />
@@ -53,6 +57,8 @@ const router = createBrowserRouter(
       <Route path="/Clints/" element={<><Header /><HomeCategory /></>} />
       <Route path="/visits/" element={<><Header /><Event /></>} />
       <Route path="/Exhibits/" element={<><Header /><Exhibits /></>} />
+      <Route path="/Training/" element={<><Header /><WorkshopUr /></>} />
+
     </Route>
   )
 );

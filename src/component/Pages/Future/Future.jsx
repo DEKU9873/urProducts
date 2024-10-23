@@ -27,8 +27,9 @@ const FutureDetails = () => {
           </div>
         </div>
             <div className="future-card-display">
-                <Link to="/visits/" style={{ textDecoration: "none" }} ><FutureCard title="وفود"  imageUrl="/image/cctv-surveillance-camera-7267551_1280.jpg"/></Link>
-                <Link to="/exhibits/" style={{ textDecoration: "none" }} ><FutureCard title="معارض"  imageUrl="/image/cctv-surveillance-camera-7267551_1280.jpg"/>   </Link>
+                <Link to="/visits/" style={{ textDecoration: "none" }} ><FutureCard title="زيارات"  imageUrl="/image/cctv-surveillance-camera-7267551_1280.jpg"/></Link>
+                <Link to="/exhibits/" style={{ textDecoration: "none" }} ><FutureCard title="المعارض"  imageUrl="/image/cctv-surveillance-camera-7267551_1280.jpg"/>   </Link>
+                <Link to="/Training/" style={{ textDecoration: "none" }} ><FutureCard title="الورش"  imageUrl="/image/cctv-surveillance-camera-7267551_1280.jpg"/>   </Link>
             
 
             </div>

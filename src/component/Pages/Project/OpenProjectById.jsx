@@ -34,8 +34,8 @@ function OpenProjectById() {
 
 
   const imgStyle = {
-    width: '40%', // Set images to 80% of the container width
-    maxHeight: '400px', // Set a max height for smaller images
+    width: '60%', // Set images to 80% of the container width
+    maxHeight: '500px', // Set a max height for smaller images
     objectFit: 'hidden', // Ensure images cover the area without distortion
     margin: '0 auto', // Center images in the slider
   };

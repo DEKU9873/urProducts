@@ -3,6 +3,8 @@ import CategoryCard from "./Clint";
 import { useTranslation } from "react-i18next";
 import React, { useEffect, useState } from "react";
 import axios from "axios"; // Import axios to make API calls
+import { BackendUrl } from "../api/api";
+
 
 const HomeCategory = () => {
   const { t } = useTranslation();
@@ -16,7 +18,7 @@ const HomeCategory = () => {
     // Fetch data from the API
     const fetchClients = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/Clients/");
+        const response = await axios.get(`${BackendUrl}/Clients/`);
         setClients(response.data); // Assuming response.data is an array of clients
       } catch (error) {
         console.error("Error fetching clients:", error);

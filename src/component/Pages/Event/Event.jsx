@@ -18,7 +18,7 @@ function Event() {
 
   const getDataProject = async () => {
     try {
-      const response = await axios.get(`${BackendUrl}/Events/`);
+      const response = await axios.get(`${BackendUrl}/Visits/`);
       if (response) {
         console.log(response.data);
         setDataEvent(response.data);

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./Exhibits.css";
+import "./WorkshopUr.css";
 import { Button, responsiveFontSizes } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { ColorButton } from "../Config/contact";
@@ -10,7 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { BackendUrl } from "../api/api";
 import { ArrowRightAlt } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
-function Exhibits() {
+function WorkshopUr() {
   const [Data, setDataEvent] = useState([]);
   useEffect(() => {
     AOS.init();
@@ -18,7 +18,7 @@ function Exhibits() {
 
   const getDataProject = async () => {
     try {
-      const response = await axios.get(`${BackendUrl}/Exhibits/`);
+      const response = await axios.get(`${BackendUrl}/Training/`);
       if (response) {
         console.log(response.data);
         setDataEvent(response.data);
@@ -76,7 +76,7 @@ function Exhibits() {
                         : item.description}
                     </p>
                     <div className="read-more">
-                      <Link to={`/ExhibitsDetails/${item.id}`}>
+                      <Link to={`/Training/${item.id}`}>
                         {direction === "ar" ? "قرأة المزيد" : "Read more"}
                         <ArrowRightAlt />
                       </Link>
@@ -96,4 +96,4 @@ function Exhibits() {
   );
 }
 
-export default Exhibits;
+export default WorkshopUr;

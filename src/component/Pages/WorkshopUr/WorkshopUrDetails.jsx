@@ -8,14 +8,14 @@ import Slider from "react-slick"; // Import the Slider component
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-function OpenProjectById() {
+function WorkshopUrDetails() {
   const [DataProject, setDataProject] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${BackendUrl}/Exhibits/${id}`);
+        const response = await axios.get(`${BackendUrl}/Training/${id}`);
         console.log(response);
         setDataProject(response.data);
       } catch (error) {
@@ -104,7 +104,7 @@ function OpenProjectById() {
 
 
 
-export default OpenProjectById;
+export default WorkshopUrDetails;
 
 
 
@@ -116,9 +116,9 @@ export default OpenProjectById;
 // import React, { useEffect, useState } from "react";
 // import { useParams } from "react-router-dom";
 // import { BackendUrl } from "../api/api";
-// import "./Exhibits.css";
+// import "./WorkshopUr.css";
 // import { useTranslation } from "react-i18next";
-// function ExhibitsDetails() {
+// function WorkshopUrDetails() {
 //   const [Event, setEvent] = useState({});
 //   const { id } = useParams();
 //   const { t } = useTranslation();
@@ -182,4 +182,4 @@ export default OpenProjectById;
 //   );
 // }
 
-// export default ExhibitsDetails;
+// export default WorkshopUrDetails;
