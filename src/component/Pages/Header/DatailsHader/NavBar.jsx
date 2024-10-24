@@ -9,108 +9,78 @@ function NavBar() {
   const currentLanguage = i18n.language;
 
   const ITEM_HEIGHT = 48;
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
+  const [eventAnchorEl, setEventAnchorEl] = useState(null); // State for events dropdown
+  const [contactAnchorEl, setContactAnchorEl] = useState(null); // State for contact dropdown
+  const openEventMenu = Boolean(eventAnchorEl);
+  const openContactMenu = Boolean(contactAnchorEl);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget); // Set the anchor element to the button that was clicked
+  const handleEventClick = (event) => {
+    setEventAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
-    setAnchorEl(null); // Close the dropdown
+  const handleContactClick = (event) => {
+    setContactAnchorEl(event.currentTarget);
+  };
+
+  const handleCloseEventMenu = () => {
+    setEventAnchorEl(null);
+  };
+
+  const handleCloseContactMenu = () => {
+    setContactAnchorEl(null);
   };
 
   const handleSendMessage = () => {
-    handleClose(); // Close the dropdown after selection
+    handleCloseContactMenu(); // Close the dropdown after selection
   };
 
   const handleOpenLinks = () => {
     window.open("https://linktr.ee/ur_productss", "_blank"); // Open the links in a new tab
-    handleClose(); // Close the dropdown after selection
+    handleCloseContactMenu(); // Close the dropdown after selection
   };
 
   return (
     <>
       <ul dir={currentLanguage === "ar" ? "rtl" : "ltr"}>
         <li>
-          <Link className="nav-link scrollto active" to="/">{t("header.Home")}</Link>
-          {/* <a className="nav-link scrollto active" href="/">
+          <Link className="nav-link scrollto active" to="/">
             {t("header.Home")}
-          </a> */}
+          </Link>
         </li>
-        {/* <li>
-          <a className="nav-link scrollto" href="#about">
-            {t("header.About")}
-          </a>
-        </li> */}
-        
         <li>
-          <Link className="nav-link scrollto" to="/Services/" >{t("header.Services")}</Link>
-          {/* <a className="nav-link scrollto" href="/Services/">
+          <Link className="nav-link scrollto" to="/Services/">
             {t("header.Services")}
-          </a> */}
+          </Link>
         </li>
-        
-        {/* <li>
-          <a className="nav-link scrollto" href="/Solution/">
-            {t("header.Oursolution")}
-          </a>
-        </li> */}
         <li>
-          <Link className="nav-link scrollto" to="/AllSolution/">{t("header.Oursolution")}</Link>
-          {/* <a className="nav-link scrollto" href="/AllSolution/">
+          <Link className="nav-link scrollto" to="/AllSolution/">
             {t("header.Oursolution")}
-          </a> */}
+          </Link>
         </li>
-
-        
-
         <li>
-          <Link className="nav-link scrollto" to="/ViewAllProject/">{t("header.OurProject")}</Link>
-          {/* <a className="nav-link scrollto" href="/ViewAllProject/">
+          <Link className="nav-link scrollto" to="/ViewAllProject/">
             {t("header.OurProject")}
-          </a> */}
+          </Link>
         </li>
 
         <li>
-          <Link className="nav-link scrollto" to="/Eventpage/">{t("header.OurEvent")}</Link>
-          {/* <a className="nav-link scrollto" href="/Eventpage/">
-            {t("header.OurEvent")}
-          </a> */}
-        </li>
-
-        <li>
-          <Link className="nav-link scrollto" to="/products/">{t("header.product")}</Link>
-          {/* <a className="nav-link scrollto" href="/products/">
-            {t("header.product")}
-          </a> */}
-        </li>
-        <li>
-          <Link className="nav-link scrollto" to="/Clints/">{t("header.OurClinents")}</Link>
-          {/* <a className="nav-link scrollto" href="/Clints/">
-            {t("header.OurClinents")}
-          </a> */}
-        </li>
-
-        <li className="custom-dropdown">
-          {/* Button to trigger the dropdown menu */}
           <a
             className="custom-nav-link custom-scrollto"
-            aria-controls={open ? "long-menu" : undefined}
+            aria-controls={openEventMenu ? "event-menu" : undefined}
             aria-haspopup="true"
-            onClick={handleClick} // Opens the dropdown on click
-            style={{cursor:"pointer"}}
+            onClick={handleEventClick} // Opens the events dropdown on click
+            style={{ cursor: "pointer" }}
           >
-            {t("header.Contact")}
+            {t("header.OurEvent")}
           </a>
           <Menu
-            id="long-menu"
+            id="event-menu"
             MenuListProps={{
               "aria-labelledby": "long-button",
             }}
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
+            anchorEl={eventAnchorEl}
+            open={openEventMenu}
+            onClose={handleCloseEventMenu}
             PaperProps={{
               style: {
                 maxHeight: ITEM_HEIGHT * 4.5,
@@ -118,11 +88,64 @@ function NavBar() {
               },
             }}
           >
-            {/* Language selection menu items */}
+            <MenuItem>
+              <Link to="/visits/" className="nav-link scrollto">
+                {t("Event.visits")}
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/Exhibits/" className="nav-link scrollto">
+                {t("Event.exhibits")}
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link to="/Training/" className="nav-link scrollto">
+                {t("Event.WorkShop")}
+              </Link>
+            </MenuItem>
+            
+          </Menu>
+        </li>
+
+        <li>
+          <Link className="nav-link scrollto" to="/products/">
+            {t("header.product")}
+          </Link>
+        </li>
+        <li>
+          <Link className="nav-link scrollto" to="/Clints/">
+            {t("header.OurClinents")}
+          </Link>
+        </li>
+
+        <li className="custom-dropdown">
+          <a
+            className="custom-nav-link custom-scrollto"
+            aria-controls={openContactMenu ? "contact-menu" : undefined}
+            aria-haspopup="true"
+            onClick={handleContactClick} // Opens the contact dropdown on click
+            style={{ cursor: "pointer" }}
+          >
+            {t("header.Contact")}
+          </a>
+          <Menu
+            id="contact-menu"
+            MenuListProps={{
+              "aria-labelledby": "long-button",
+            }}
+            anchorEl={contactAnchorEl}
+            open={openContactMenu}
+            onClose={handleCloseContactMenu}
+            PaperProps={{
+              style: {
+                maxHeight: ITEM_HEIGHT * 4.5,
+                width: "20ch",
+              },
+            }}
+          >
             <MenuItem onClick={handleSendMessage}>
-              {" "}
               <a className="nav-link scrollto" href="#contact">
-              {t("header.SendaMassage")}
+                {t("header.SendaMassage")}
               </a>
             </MenuItem>
             <MenuItem onClick={handleOpenLinks}>{t("header.OurLink")}</MenuItem>
@@ -132,4 +155,5 @@ function NavBar() {
     </>
   );
 }
+
 export default NavBar;

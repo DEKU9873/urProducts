@@ -17,7 +17,7 @@ const ProductUr = () => {
 
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/categories/");
+        const response = await axios.get("http://127.0.0.1:8000/Categories/");
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -28,7 +28,7 @@ const ProductUr = () => {
   }, []);
 
   const handleCategoryClick = (category) => {
-    navigate(`/products/${category.id}`); // الانتقال إلى صفحة جديدة مع معرف الفئة
+    navigate(`/Products/${category.id}`); // الانتقال إلى صفحة جديدة مع معرف الفئة
   };
 
   return (

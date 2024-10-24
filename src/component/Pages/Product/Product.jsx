@@ -14,7 +14,7 @@ function Product() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${BackendUrl}/categories/`);
+        const response = await axios.get(`${BackendUrl}/Categories/`);
         setData(response.data);
       } catch (error) {
         console.log("Error fetching data:", error);

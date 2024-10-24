@@ -69,7 +69,9 @@
   "Event": {
     "title": "Our Event",
     "visits": "Visits",
-    "exibits": "Exibits"
+    "exhibits": "exhibits",
+    "WorkShop" :"Training"
+
   },
   "Product": {
     "title": "Our Product"

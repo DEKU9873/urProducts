@@ -68,7 +68,8 @@
   "Event": {
     "title": "فعالياتنا",
     "visits": "وفود",
-    "exibits": "معارض"
+    "exhibits": "معارض",
+    "WorkShop" :"ورش"
   },
   "Product": {
     "title": "منتجاتنا"
