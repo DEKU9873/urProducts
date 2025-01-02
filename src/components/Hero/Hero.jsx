@@ -42,9 +42,10 @@ const Hero = () => {
     infinite: true,
     speed: 800,
     slidesToScroll: 1,
-    autoplaySpeed: 4000,
+    autoplay: true,
+    autoplaySpeed: 2000,
     cssEase: "ease-in-out",
-    pauseOnHover: false,
+    pauseOnHover: true,
     pauseOnFocus: true,
   };
   return (

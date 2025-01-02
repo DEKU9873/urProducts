@@ -65,7 +65,7 @@ const Category2 = () => {
                 />
               </div>
             </div>
-            <img src={Image2} alt="" className="w-[320px] absolute buttom-0" />
+            <img src={Image2} alt="" className="w-[320px] absolute bottom-0" />
           </div>
           {/* third col */}
           <div
@@ -93,10 +93,9 @@ const Category2 = () => {
             <img
               src={Image3}
               alt=""
-              className="w-[200px] absolute buttom-0 right-0"
+              className="w-[200px] absolute  bottom-0 right-0"
             />
           </div>
-        
         </div>
       </div>
     </div>

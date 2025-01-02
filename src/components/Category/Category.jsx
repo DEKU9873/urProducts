@@ -63,7 +63,7 @@ const Category = () => {
             <img
               src={Image2}
               alt=""
-              className="w-[320px] absolute -right-6 lg:top-[40px]"
+              className="w-[320px] absolute top-0 -right-4 lg:top-[40px]"
             />
           </div>
           {/* third col */}
@@ -72,7 +72,7 @@ const Category = () => {
           to-primary/90 text-white rounded-3xl relative h-[320px]
           flex items-end"
           >
-            <div >
+            <div>
               <div className="mb-4">
                 <p className="mb-[2px] text-white">Enjoy</p>
                 <p className="text-2xl font-semibold mb-[2px]">With</p>
@@ -101,5 +101,4 @@ const Category = () => {
     </div>
   );
 };
-
 export default Category;
