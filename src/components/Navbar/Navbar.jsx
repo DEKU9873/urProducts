@@ -57,10 +57,10 @@ const Navbar = () => {
             <a
               href="#"
               className="text-primary font-semibold tracking-widest
-            text-2xl uppercase 
+            text-2xl  
             sm:text-3xl"
             >
-              Eshop
+              URProduct
             </a>
             {/* Menu Items */}
             <div className="hidden lg:block">
