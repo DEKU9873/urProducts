@@ -11,6 +11,7 @@ const BiogData = [
       "lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
       publisher:"jan 20, 2024 by Deku",
       image:img1,
+      aosDelay:"0"
   },
   {
     title:
@@ -19,6 +20,7 @@ const BiogData = [
       "lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
       publisher:"jan 20, 2024 by Deku",
       image:img2,
+      aosDelay:"200"
   },
   {
     title:
@@ -27,6 +29,7 @@ const BiogData = [
       "lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
       publisher:"jan 20, 2024 by Deku",
       image:img3,
+      aosDelay:"400"
   },
 
 ];
@@ -43,7 +46,10 @@ const Biogs = () => {
         >
           {/* Biog Card */}
           {BiogData.map((data, index) => (
-            <div key={index} className="bg-white dark:bg-gray-900">
+            <div
+            data-aos="fade-up"
+            data-aos-delay={data.aosDelay}
+            key={index} className="bg-white dark:bg-gray-900">
                 {/* image section */}
                 <div className="overflow-hidden rounded-2xl mb-2">
                     <img src={data.image} alt=""

@@ -41,7 +41,7 @@ const Footer = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae a
               accusantium illum
             </p>
-            <p className="text-gray-500 mt-4">Made with ❤️ by URProduct</p>
+            <p className="text-gray-500 mt-4 mb-4">Made with ❤️ by URProduct</p>
             <a
               href=""
               target="_blank"
@@ -97,9 +97,7 @@ const Footer = () => {
             </div>
             {/* Company address */}
             <div className=" py-8 px-4 col-span-2 sm:col-span-auto">
-            <h1 className="text-xl font-bold sm:text-left mb-3 ">
-                Address
-              </h1>
+              <h1 className="text-xl font-bold sm:text-left mb-3 ">Address</h1>
               <div>
                 <div className="flex items-center gap-3">
                   <FaLocationArrow />
@@ -111,21 +109,27 @@ const Footer = () => {
                 </div>
                 {/* social media links */}
                 <div className="flex items-center gap-3 mt-6">
-                    <a href="">
-                        <FaInstagram className="text-3xl 
-                        hover:text-primary duration-300"/>
-                    </a>
-                    <a href="">
-                        <FaFacebook className="text-3xl 
-                        hover:text-primary duration-300"/>
-                    </a>
-                    <a href="">
-                        <FaLinkedin className="text-3xl 
-                        hover:text-primary duration-300"/>
-                    </a>
+                  <a href="">
+                    <FaInstagram
+                      className="text-3xl 
+                        hover:text-primary duration-300"
+                    />
+                  </a>
+                  <a href="">
+                    <FaFacebook
+                      className="text-3xl 
+                        hover:text-primary duration-300"
+                    />
+                  </a>
+                  <a href="">
+                    <FaLinkedin
+                      className="text-3xl 
+                        hover:text-primary duration-300"
+                    />
+                  </a>
                 </div>
               </div>
-            </div>    
+            </div>
           </div>
         </div>
       </div>
