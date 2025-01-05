@@ -10,39 +10,41 @@ const Menulinks = [
     link: "/#",
   },
   {
-    id: 2,
-    name: "Shop",
-    link: "/#shop",
+    id: 1,
+    name: "About US",
+    link: "/#About US",
+  },
+  {
+    id: 3,
+    name: "Our Service",
+    link: "/#Our Service",
   },
 
   {
-    id: 3,
-    name: "About",
+    id: 4,
+    name: "Application and Software",
     link: "/#about",
   },
   {
-    id: 4,
-    name: "Blog",
-    link: "/#blog",
+    id: 5,
+    name: "Data Center Service",
+    link: "/#Data Center Service",
   },
+  
 ];
 
 const DropdownLinks = [
   {
     id: 1,
-    name: "Trending Products",
+    name: "UR Palm",
     link: "/#",
   },
   {
     id: 2,
-    name: "Best Selling",
+    name: "National Bank for Obsolete Materials",
     link: "/#",
   },
-  {
-    id: 3,
-    name: "Top Rated",
-    link: "/#",
-  },
+
 ];
 const Navbar = () => {
   return (
@@ -50,14 +52,10 @@ const Navbar = () => {
       className="bg-white dark:bg-gray-900 dark:text-white
     duration-200 relative z-40"
     >
-       {/* <div
-  className="bg-white dark:bg-gray-900 dark:text-white
-    duration-200 fixed top-0 left-0 w-full z-50 shadow-md"
-> */}
       <div className="py-4">
         <div className="container flex justify-between items-center">
-          {/* Logo and Links section */}
-          <div className="flex items-center gap-4">
+          {/* Logo Section */}
+          <div>
             <a
               href="#"
               className="text-primary font-semibold tracking-widest
@@ -66,96 +64,66 @@ const Navbar = () => {
             >
               URProduct
             </a>
-            {/* Menu Items */}
-            <div className="hidden lg:block">
-              <ul className="flex items-center gap-4">
-                {Menulinks.map((data, index) => (
-                  <li key={index}>
-                    <a
-                      href={data.link}
-                      className="inline-block px-4 font-semibold text-gray-500
-                        hover:text-black dark:hover:text-white
-                        duration-200"
-                    >
-                      {" "}
-                      {data.name}
-                    </a>
-                  </li>
-                ))}
-                {/* Dropdown */}
-                <li className="relative cursor-pointer group">
-                  <a
-                    href="#"
-                    className="flex items-center gap-[2px] 
-                  font-semibold text-gray-500 dark:hover:text-white py-2"
-                  >
-                    Quick Links
-                    <span>
-                      <FaCaretDown
-                        className="group-hover:rotate-180 
-                    duration-300"
-                      />
-                    </span>
-                  </a>
-                  {/* Dropdown Links */}
-                  <div
-                    className="absolute z-[9999] hidden group-hover:block w-[200px]
-                  rounded-md bg-white shadow-md dark:bg-gray-900 p-2 text-black 
-                  dark:text-white "
-                  >
-                    <ul className="space-y-2">
-                      {DropdownLinks.map((data, index) => (
-                        <li>
-                          <a
-                            className="text-gray-500 hover:text-black
-                               dark:hover:text-white duration-200 inline-block 
-                               w-full p-2 hover:bg-primary/20 rounded-md font-semibold"
-                            href={data.link}
-                          >
-                            {" "}
-                            {data.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </div>
 
-          {/* Navbar Right section */}
-          <div className="flex justify-between items-center gap-4">
-            {/* Search Bar Section */}
+          {/* Menu Items Section */}
+          <div className="hidden lg:block">
+            <ul className="flex items-center gap-4">
+              {Menulinks.map((data, index) => (
+                <li key={index}>
+                  <a
+                    href={data.link}
+                    className="inline-block px-4 font-semibold text-gray-500
+                      hover:text-black dark:hover:text-white
+                      duration-200"
+                  >
+                    {data.name}
+                  </a>
+                </li>
+              ))}
+              {/* Dropdown */}
+              <li className="relative cursor-pointer group">
+                <a
+                  href="#"
+                  className="flex items-center gap-[2px] 
+                  font-semibold text-gray-500 dark:hover:text-white py-2"
+                >
+                  Systems
+                  <span>
+                    <FaCaretDown
+                      className="group-hover:rotate-180 
+                    duration-300"
+                    />
+                  </span>
+                </a>
+                {/* Dropdown Links */}
+                <div
+                  className="absolute z-[9999] hidden group-hover:block w-[200px]
+                  rounded-md bg-white shadow-md dark:bg-gray-900 p-2 text-black 
+                  dark:text-white "
+                >
+                  <ul className="space-y-2">
+                    {DropdownLinks.map((data, index) => (
+                      <li key={index}>
+                        <a
+                          className="text-gray-500 hover:text-black
+                             dark:hover:text-white duration-200 inline-block 
+                             w-full p-2 hover:bg-primary/20 rounded-md font-semibold"
+                          href={data.link}
+                        >
+                          {data.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
 
-            <div className="relative group ">
-              <input
-                type="text"
-                placeholder="Search"
-                className="
-              search-bar
-              "
-              />
-              <IoMdSearch
-                className="text-xl text-gray-600 group-hover:text-primary
-              dark:text-gray-400 absolute top-1/2 -translate-y-1/2
-              right-3 duration-200"
-              />
-            </div>
-            {/* order-button section */}
-            <button className="relative p-3">
-              <FaCartShopping className="text-xl text-gray-600 dark:text-gray-400" />
-              <div
-                className="w-4 h-4 bg-red-500 text-white rounded-full
-              absolute top-0 right-0 flex items-center justify-center text-xs"
-              >
-                4
-              </div>
-            </button>
-            {/* Dark mode Section */}
-            <div>
-              <DarkMode />
-            </div>
+          {/* Dark Mode Section */}
+          <div>
+            <DarkMode />
           </div>
         </div>
       </div>

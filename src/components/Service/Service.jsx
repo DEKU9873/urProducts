@@ -1,40 +1,57 @@
 import React from "react";
-import { FaCarSide } from "react-icons/fa";
-import { FaHeadphonesAlt } from "react-icons/fa";
-import { FaWallet } from "react-icons/fa";
-import { FaCheckCircle } from "react-icons/fa";
+import { GrCloudSoftware } from "react-icons/gr";
+import { GoProjectSymlink } from "react-icons/go";
+import { MdEngineering } from "react-icons/md";
+import { MdOutlineNetworkWifi3Bar } from "react-icons/md";
+import { FaHandsHelping } from "react-icons/fa";
+import { LuHandHelping } from "react-icons/lu";
+import Heading from "../Shared/Heading";
 
 const ServiceData = [
   {
     id: 1,
-    icon: <FaCarSide className="text-4xl md:text-5xl text-primary" />,
-    title: "Free Shipping",
-    desc: "From all orders over $50.00",
+    icon: <GrCloudSoftware className="text-4xl md:text-5xl text-primary" />,
+    title: "Modern software manufacturing",
+    desc: "According to the needs of the beneficiaries",
   },
   {
     id: 2,
-    icon: <FaHeadphonesAlt className="text-4xl md:text-5xl text-primary" />,
-    title: "Support 24/7",
-    desc: "Shop with an expert",
+    icon: <GoProjectSymlink className="text-4xl md:text-5xl text-primary" />,
+    title: "Implementation of integrated projects",
+    desc: "Specializing in the transfer of knowledge and modern technology",
   },
   {
     id: 3,
-    icon: <FaWallet className="text-4xl md:text-5xl text-primary" />,
-    title: "Money back",
-    desc: "100% money back guarantee",
+    icon: <MdEngineering className="text-4xl md:text-5xl text-primary" />,
+    title: "Providing training services",
+    desc: "covering the fields of information and communication technology",
   },
   {
     id: 4,
-    icon: <FaCheckCircle className="text-4xl md:text-5xl text-primary" />,
-    title: "Secure Payment",
-    desc: "100% secure payment",
+    icon: <MdOutlineNetworkWifi3Bar className="text-4xl md:text-5xl text-primary" />,
+    title: "Implementation of network projects",
+    desc: "From design, preparation of supplies and implementation",
+  },
+  {
+    id: 5,
+    icon: <FaHandsHelping className="text-4xl md:text-5xl text-primary" />,
+    title: "Advice",
+    desc: "In the field of physical components",
+  },
+  {
+    id: 6,
+    icon: <LuHandHelping className="text-4xl md:text-5xl text-primary" />,
+    title: "Providing consultations",
+    desc: "In the field of information technology and development of automated work systems",
   },
 ];
 const Service = () => {
   return (
     <div>
+      
       <div className="container my-14 md:my-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8 ">
+      <Heading title="Our Services" subtitle="Explore our services" />
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8 ">
           {ServiceData.map((data, index) => (
             <div
               key={data.id}

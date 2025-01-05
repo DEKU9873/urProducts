@@ -57,8 +57,6 @@ const App = () => {
     >
       <Navbar />
       <Hero />
-      <Category />
-      <Category2 />
       <Service />
       <Banner data={BannerData} />
       <Products />
