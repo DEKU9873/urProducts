@@ -11,9 +11,15 @@ import Products from "./components/Products/Products";
 import Biogs from "./components/Biogs/Biogs";
 import Partener from "./components/Partener/Partener";
 import Footer from "./components/Footer/Footer";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import HomePage from "./Pages/HomePage";
+import AllService from "./components/Biogs/Application";
+import Application from "./components/Biogs/Application";
+import AllDataCenter from "./components/DataCenter/AllDataCenter";
 
 const BannerData = {
   discount: "30% off",
@@ -55,17 +61,24 @@ const App = () => {
       className="bg-white dark:bg-gray-900 dark:text-white
     duration-200 overflow-hidden"
     >
+      
+      <BrowserRouter>
       <Navbar />
-      <Hero />
-      <Service />
-      <Banner data={BannerData} />
-      <Products />
-      <Banner data={BannerData2} />
-      <Biogs />
-      <Partener />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/allaplication" element={<Application />} />
+          <Route path="/alldatacenter" element={<AllDataCenter />} />
+          
+        </Routes>
+      </BrowserRouter>
       <Footer />
+      
     </div>
   );
 };
 
 export default App;
+
+
+
+      

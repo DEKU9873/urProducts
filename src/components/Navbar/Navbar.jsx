@@ -3,6 +3,8 @@ import { IoMdSearch } from "react-icons/io";
 import { FaCartShopping } from "react-icons/fa6";
 import DarkMode from "./DarkMode";
 import { FaCaretDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 const Menulinks = [
   {
     id: 1,
@@ -30,7 +32,6 @@ const Menulinks = [
     name: "Data Center Service",
     link: "/#Data Center Service",
   },
-  
 ];
 
 const DropdownLinks = [
@@ -44,7 +45,6 @@ const DropdownLinks = [
     name: "National Bank for Obsolete Materials",
     link: "/#",
   },
-
 ];
 const Navbar = () => {
   return (
@@ -56,14 +56,14 @@ const Navbar = () => {
         <div className="container flex justify-between items-center">
           {/* Logo Section */}
           <div>
-            <a
-              href="#"
-              className="text-primary font-semibold tracking-widest
-            text-2xl  
-            sm:text-3xl"
-            >
-              URProduct
-            </a>
+            <div>
+              <Link
+                to="/"
+                className="text-primary font-semibold tracking-widest text-2xl sm:text-3xl"
+              >
+                URProduct
+              </Link>
+            </div>
           </div>
 
           {/* Menu Items Section */}
@@ -71,14 +71,14 @@ const Navbar = () => {
             <ul className="flex items-center gap-4">
               {Menulinks.map((data, index) => (
                 <li key={index}>
-                  <a
-                    href={data.link}
+                  <Link
+                    to={data.link}
                     className="inline-block px-4 font-semibold text-gray-500
-                      hover:text-black dark:hover:text-white
-                      duration-200"
+        hover:text-black dark:hover:text-white
+        duration-200"
                   >
                     {data.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
               {/* Dropdown */}
