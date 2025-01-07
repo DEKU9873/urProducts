@@ -20,6 +20,8 @@ import HomePage from "./Pages/HomePage";
 import AllService from "./components/Biogs/Application";
 import Application from "./components/Biogs/Application";
 import AllDataCenter from "./components/DataCenter/AllDataCenter";
+import UrPalm from "./components/Systems/UrPalm";
+import NationalBank from "./components/Systems/NationalBank";
 
 const BannerData = {
   discount: "30% off",
@@ -68,6 +70,8 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/allaplication" element={<Application />} />
           <Route path="/alldatacenter" element={<AllDataCenter />} />
+          <Route path="/urpalm" element={<UrPalm />} />
+          <Route path="/nationalbank" element={<NationalBank />} />
           
         </Routes>
       </BrowserRouter>

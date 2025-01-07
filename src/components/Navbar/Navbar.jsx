@@ -38,12 +38,12 @@ const DropdownLinks = [
   {
     id: 1,
     name: "UR Palm",
-    link: "/#",
+    link: "/urpalm",
   },
   {
     id: 2,
     name: "National Bank for Obsolete Materials",
-    link: "/#",
+    link: "/nationalbank",
   },
 ];
 const Navbar = () => {
@@ -105,14 +105,14 @@ const Navbar = () => {
                   <ul className="space-y-2">
                     {DropdownLinks.map((data, index) => (
                       <li key={index}>
-                        <a
+                        <Link
                           className="text-gray-500 hover:text-black
-                             dark:hover:text-white duration-200 inline-block 
-                             w-full p-2 hover:bg-primary/20 rounded-md font-semibold"
-                          href={data.link}
+                        dark:hover:text-white duration-200 inline-block 
+                        w-full p-2 hover:bg-primary/20 rounded-md font-semibold"
+                          to={data.link}
                         >
                           {data.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

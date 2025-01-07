@@ -3,6 +3,9 @@ import Heading from "../Shared/Heading";
 import img1 from "../assets/allaplication/1.jpg";
 import img2 from "../assets/allaplication/2.jpg";
 import img3 from "../assets/allaplication/3.jpg";
+import img4 from "../assets/allaplication/4.jpg";
+import img5 from "../assets/allaplication/5.jpg";
+import img6 from "../assets/allaplication/6.jpg";
 import { Link } from "react-router-dom";
 
 const BiogData = [
@@ -22,6 +25,24 @@ const BiogData = [
     id: 3,
     dec: "Applications and programs for electronic marketing, order management, distribution, sales and e-commerce",
     img: img3,
+    aosDelay: "200",
+  },
+  {
+    id: 4,
+    dec: "Applications and software for data security, cyber security, reputation management (ORM), data warehouses, business automation and data mining.",
+    img: img4,
+    aosDelay: "200",
+  },
+  {
+    id: 5,
+    dec: "Applications and programs for all transactions of the Ministry of Justice and the courts",
+    img: img5,
+    aosDelay: "200",
+  },
+  {
+    id: 6,
+    dec: "Applications and programs for centralized connectivity of parking lots, vehicle tracking and tracking, and port management.",
+    img: img6,
     aosDelay: "200",
   },
 ];
