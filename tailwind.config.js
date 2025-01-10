@@ -20,6 +20,10 @@ export default {
           DEFAULT: "1rem",
           sm: "3rem",
         },
+
+        fontFamily: {
+          sans: ['Roboto', 'sans-serif'], // استبدل بـ 'Roboto' أو أي اسم خط آخر
+        },
       },
     },
   },

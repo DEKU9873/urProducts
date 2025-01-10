@@ -1,4 +1,4 @@
-import React, { use, useEffect } from "react";
+import React, {  useEffect } from "react";
 import Hero from "../components/Hero/Hero";
 import Service from "../components/Service/Service";
 import Banner from "../components/Banner/Banner";
@@ -13,7 +13,6 @@ import AOS from "aos";
 import "aos/dist/aos.css"
 import DataCenter from "../components/DataCenter/DataCenter";
 
-
 const BannerData = {
   discount: "30% off",
   title: "Fine Smile",
@@ -25,6 +24,7 @@ const BannerData = {
     "lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
   bgColor: "#f42c37",
 };
+
 const BannerData2 = {
   discount: "30% off",
   title: "Fine Smile",
@@ -36,7 +36,6 @@ const BannerData2 = {
     "lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
   bgColor: "#2dcc6f",
 };
-
 
 const HomePage = () => {
     useEffect(() => {
@@ -59,10 +58,8 @@ const HomePage = () => {
           <Service />
           <Biogs />
           <DataCenter/>
-          
           <Partener />
         </div>
       );
 }
-
 export default HomePage

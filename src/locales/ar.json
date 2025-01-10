@@ -1,0 +1,20 @@
+{
+  "Logo": "منتجات اور",
+
+  "Heading": {
+    "Home": "الرئيسية",
+    "About US": "عنّا",
+    "Our Service": "خدماتنا",
+    "Application and Software": "التطبيقات والبرامج",
+    "Data Center Service": "خدمات مركز البيانات",
+    "Systems": "النظم",
+    "UR Palm": "نظام بصمة الشرايين اور",
+    "National Bank for Obsolete Materials": "البنك الوطني للمواد الراكدة"
+  },
+
+  "Subtitle": {
+    "Explore our Application and Software": "اكتشف تطبيقاتنا وبرمجياتنا",
+    "Explore our Data Center Services": "اكتشف خدمات مركز البيانات لدينا",
+    "Explore our services": "اكتشف خدماتنا"
+  }
+}

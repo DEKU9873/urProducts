@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import Image1 from "../assets/hero/headphone.png";
-import Image2 from "../assets/category/vr.png";
+import Image1 from "../assets/systems/Logo.svg";
+import Image2 from "../assets/systems/palm recognition.jpg";
 import Image3 from "../assets/category/macbook.png";
 import Button from "../Shared/Button";
 
@@ -9,27 +9,18 @@ const HeroSlide = [
   {
     id: 1,
     image: Image1,
-    subtitle: "Beats solo",
-    title: "Wireless",
-    title2: "Headphone",
+    // subtitle: "Beats solo",
+    title: "National Bank for Obsolete Materials",
+    // title2: "Obsolete Materials",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, voluptatum! ",
   },
   {
     id: 2,
     image: Image2,
-    subtitle: "Beats solo",
-    title: "Wireless",
-    title2: "Virtual",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, voluptatum! ",
-  },
-  {
-    id: 3,
-    image: Image3,
-    subtitle: "Beats solo",
-    title: "Branded",
-    title2: "Labtops",
+    // subtitle: "Beats solo",
+    title: "UR Palm Solution",
+    // title2: "Virtual",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, voluptatum! ",
   },
@@ -99,7 +90,7 @@ const Hero = () => {
                       data-aos-delay="300"
                     >
                       <Button
-                        text="Shop By Category"
+                        text="See Details"
                         bgColor="bg-primary"
                         textColor="text-white"
                       />

@@ -1,0 +1,21 @@
+{
+  "Logo": "URProduct",
+
+  "Heading": {
+    "Home": "Home",
+    "About US": "About Us",
+    "Our Service": "Our Service",
+    "Application and Software": "Application and Software",
+    "Data Center Service": "Data Center Service",
+    "Systems": "Systems",
+    "UR Palm": "UR Palm",
+    "National Bank for Obsolete Materials": "National Bank for Obsolete Materials"
+  },
+  "Subtitle": {
+    "Explore our Application and Software": "Explore our Application and Software",
+    "Explore our Data Center Services": "Explore our Data Center Services",
+    "Explore our services": "Explore our services"
+
+  }
+
+}

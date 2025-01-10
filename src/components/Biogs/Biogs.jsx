@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next"; // استيراد useTranslation
 import Heading from "../Shared/Heading";
 import img1 from "../assets/allaplication/1.jpg";
 import img2 from "../assets/allaplication/2.jpg";
@@ -8,53 +9,62 @@ import img5 from "../assets/allaplication/5.jpg";
 import img6 from "../assets/allaplication/6.jpg";
 import { Link } from "react-router-dom";
 
+// بيانات التطبيقات والبرمجيات مع الترجمة العربية
 const BiogData = [
   {
     id: 1,
     dec: "Applications and programs for managing warehouses, supply and shipping operations, and GPS tracking of logistics services",
+    decAr: "التطبيقات والبرامج لإدارة المخازن، عمليات التوريد والشحن، وتتبع الخدمات اللوجستية عبر GPS",
     img: img1,
     aosDelay: "0",
   },
   {
     id: 2,
     dec: "Applications and programs for electronic payment operations of all kinds, subscriptions and payment lists",
+    decAr: "التطبيقات والبرامج للعمليات الدفع الإلكتروني بجميع أنواعها، الاشتراكات وقوائم الدفع",
     img: img2,
     aosDelay: "100",
   },
   {
     id: 3,
     dec: "Applications and programs for electronic marketing, order management, distribution, sales and e-commerce",
+    decAr: "التطبيقات والبرامج للتسويق الإلكتروني، إدارة الطلبات، التوزيع، المبيعات والتجارة الإلكترونية",
     img: img3,
     aosDelay: "200",
   },
   {
     id: 4,
     dec: "Applications and software for data security, cyber security, reputation management (ORM), data warehouses, business automation and data mining.",
+    decAr: "التطبيقات والبرامج لأمن البيانات، الأمن السيبراني، إدارة السمعة (ORM)، مستودعات البيانات، أتمتة الأعمال واستخراج البيانات.",
     img: img4,
     aosDelay: "200",
   },
   {
     id: 5,
     dec: "Applications and programs for all transactions of the Ministry of Justice and the courts",
+    decAr: "التطبيقات والبرامج لجميع معاملات وزارة العدل والمحاكم",
     img: img5,
     aosDelay: "200",
   },
   {
     id: 6,
     dec: "Applications and programs for centralized connectivity of parking lots, vehicle tracking and tracking, and port management.",
+    decAr: "التطبيقات والبرامج للربط المركزي لمواقف السيارات، تتبع المركبات وإدارتها، وإدارة الموانئ.",
     img: img6,
     aosDelay: "200",
   },
 ];
 
 const Biogs = () => {
+  const { t, i18n } = useTranslation(); // استخدام الترجمة
+
   return (
     <div className="my-12">
       <div className="container">
         {/* Header section */}
         <Heading
-          title="Application and Software"
-          subtitle="Explore our Application and Software"
+          title={t("Heading.Application and Software")} // الترجمة
+          subtitle={t("Subtitle.Explore our Application and Software")} // الترجمة
         />
         {/* Biogs section */}
         <div
@@ -80,25 +90,24 @@ const Biogs = () => {
               </div>
               {/* content section */}
               <div className="space-y-2">
-                {/* <p className="font-bold line-clamp-1">{data.title}</p> */}
                 <p
                   className="line-clamp-2 text-sm text-gray-600
                     dark:text-gray-400"
                 >
-                  {data.dec}
+                  {i18n.language === "ar" ? data.decAr : data.dec} {/* اختيار النص بناءً على اللغة */}
                 </p>
               </div>
             </div>
           ))}
         </div>
         {/* Read More Button */}
-        <Link to={"/allaplication"}>
-          <div className="flex justify-center items-center text-center mt-8">
+        <div className="flex justify-center items-center text-center mt-8">
+          <Link to={"/allaplication"}>
             <div className="flex justify-center items-center px-8 py-3 w-[200px] bg-primary text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer">
-              View More
+              {t("View More")} {/* الترجمة */}
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
     </div>
   );
