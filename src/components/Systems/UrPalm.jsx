@@ -1,13 +1,17 @@
 import React from "react";
 import Heading from "../Shared/Heading";
 import urpalmposter from "../assets/systems/urpalm.png";
+import { useTranslation } from "react-i18next"; // استيراد useTranslation
+
 
 const UrPalm = () => {
+    const { t, i18n } = useTranslation(); // استخدام الترجمة
+  
   return (
-    <div className="bg-gray-100 flex items-center justify-center">
-      <div className="container mt-10 bg-gray-100 shadow-md rounded-lg overflow-hidden w-full">
-        <Heading title="UR Palm" subtitle="Explore our UR Palm system" />
-        <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-100 gap-4">
+    <div className="bg-gray-100 flex items-center justify-center dark:bg-gray-900">
+      <div className="container mt-10 bg-gray-100 shadow-md rounded-lg overflow-hidden w-full dark:bg-gray-900">
+        <Heading title={t("Heading.UR Palm")} subtitle="Explore our UR Palm system" />
+        <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-100 gap-4 dark:bg-gray-900">
           <video
             className="mx-1 w-full  h-80 my-auto object-cover rounded-md"
             controls
@@ -15,77 +19,57 @@ const UrPalm = () => {
             poster={urpalmposter}
           ></video>
           <div className="p-6 flex flex-col justify-center">
-            <h1 className="text-2xl font-bold text-gray-800 mb-4">
-              How the UR PALM Biometric Verification System Works
+            <h1 className="text-2xl font-bold text-gray-800 mb-4 dark:text-white">
+              {t("UR Palm.How the UR PALM Biometric Verification System Works")}
             </h1>
-            <p className="text-gray-600 mb-4 text-justify">
-              1. Infrared Imaging: A device is used to capture images of the
-              blood vessels beneath the skin using infrared rays. These rays
-              clearly and accurately reveal the vascular pattern.
+            <p className="text-gray-600 mb-4 text-justify dark:text-white">
+              {t("UR Palm.How Work1")}
             </p>
-            <p className="text-gray-600 mb-4 text-justify">
-              2. Image Analysis: The captured image is analyzed to extract the
-              unique features of the blood vessels, such as their arrangement,
-              size, and shape. These features are converted into unique digital
-              data.
+            <p className="text-gray-600 mb-4 text-justify dark:text-white">
+            {t("UR Palm.How Work2")}
             </p>
-            <p className="text-gray-600 mb-4 text-justify">
-              3. Data Storage: The extracted data is stored in a secure database
-              and can be used later for identity verification.
+            <p className="text-gray-600 mb-4 text-justify dark:text-white">
+            {t("UR Palm.How Work3")}
             </p>
-            <p className="text-gray-600 mb-4 text-justify">
-              4. Verification Process: When attempting to access the system, a
-              new infrared image of the blood vessels is captured and compared
-              with the stored data. If the data matches, identity is confirmed,
-              and access is granted.
+            <p className="text-gray-600 mb-4 text-justify dark:text-white">
+            {t("UR Palm.How Work4")}
             </p>
           </div>
         </div>
         <div className="flex  justify-center mt-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Advantages Section */}
-            <div className="p-6 bg-gray-100">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">
-                Advantages of the UR PALM System
+            <div className="p-6 bg-gray-100 dark:bg-gray-900 dark:text-white">
+              <h2 className="text-xl font-bold text-gray-800 mb-4 dark:text-white">
+                {t("UR Palm.Advantages of the UR PALM System")}
               </h2>
-              <ul className="list-disc list-inside text-gray-600 mb-4">
+              <ul className="list-disc list-inside text-gray-600 mb-4 dark:text-white">
                 <li>
-                  <strong>High Accuracy:</strong> Since vascular patterns are
-                  unique to each individual, verification using infrared
-                  technology is extremely accurate.
+                  <strong>{t("UR Palm.Advantages1")}</strong> {t("UR Palm.decription1")}
                 </li>
                 <li>
-                  <strong>Strong Security:</strong> It is difficult to replicate
-                  or forge vascular patterns, making this system reliable and
-                  secure.
+                  <strong>{t("UR Palm.Advantages2")}</strong> {t("UR Palm.decription2")}
                 </li>
                 <li>
-                  <strong>Fast Verification:</strong> The system can perform
-                  verification quickly and accurately without requiring
-                  prolonged interaction from the user.
+                  <strong>{t("UR Palm.Advantages3")}</strong> {t("UR Palm.decription3")}
                 </li>
               </ul>
             </div>
 
             {/* Applications Section */}
-            <div className="p-6 bg-gray-100">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">
-                Applications and Uses
+            <div className="p-6 bg-gray-100 dark:bg-gray-900 ">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
+                {t("UR Palm.Applications and Uses")}
               </h2>
-              <ul className="list-disc list-inside text-gray-600">
+              <ul className="list-disc list-inside text-gray-600 dark:text-white">
                 <li>
-                  <strong>Security:</strong> The system is used in sensitive
-                  security environments, such as entrances to government
-                  buildings or private institutions.
+                  <strong>{t("UR Palm.Use1")}</strong> {t("UR Palm.decription4")}
                 </li>
                 <li>
-                  <strong>Identity Verification:</strong> It can be integrated
-                  with other identity verification systems to enhance security
-                  levels.
+                  <strong>{t("UR Palm.Use2")}</strong> {t("UR Palm.decription5")}
                 </li>
                 <li>
-                  <strong>Physical Access:</strong> It is used at secure access
-                  points that require high levels of verification.
+                  <strong>{t("UR Palm.Use3")}</strong> {t("UR Palm.decription6")}
                 </li>
               </ul>
             </div>

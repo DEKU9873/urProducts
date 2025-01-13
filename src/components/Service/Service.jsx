@@ -13,12 +13,12 @@ const ServiceData = [
     id: 1,
     icon: <GrCloudSoftware className="text-4xl md:text-5xl text-primary" />,
     title: {
-      en: "Modern software manufacturing",
-      ar: "تصنيع البرمجيات الحديثة"
+      en: "Design and implementation of new programs",
+      ar: "تصميم وتنفيذ البرمجيات الحديثة",
     },
     desc: {
       en: "According to the needs of the beneficiaries",
-      ar: "وفقًا لاحتياجات المستفيدين"
+      ar: "وفقًا لاحتياجات المستفيدين",
     },
   },
   {
@@ -26,11 +26,11 @@ const ServiceData = [
     icon: <GoProjectSymlink className="text-4xl md:text-5xl text-primary" />,
     title: {
       en: "Implementation of integrated projects",
-      ar: "تنفيذ المشاريع المتكاملة"
+      ar: "تنفيذ المشاريع المتكاملة",
     },
     desc: {
       en: "Specializing in the transfer of knowledge and modern technology",
-      ar: "التخصص في نقل المعرفة والتكنولوجيا الحديثة"
+      ar: "التخصص في نقل المعرفة والتكنولوجيا الحديثة",
     },
   },
   {
@@ -38,23 +38,25 @@ const ServiceData = [
     icon: <MdEngineering className="text-4xl md:text-5xl text-primary" />,
     title: {
       en: "Providing training services",
-      ar: "تقديم خدمات التدريب"
+      ar: "تقديم خدمات التدريب",
     },
     desc: {
       en: "Covering the fields of information and communication technology",
-      ar: "تغطية مجالات تكنولوجيا المعلومات والاتصالات"
+      ar: "تغطية مجالات تكنولوجيا المعلومات والاتصالات",
     },
   },
   {
     id: 4,
-    icon: <MdOutlineNetworkWifi3Bar className="text-4xl md:text-5xl text-primary" />,
+    icon: (
+      <MdOutlineNetworkWifi3Bar className="text-4xl md:text-5xl text-primary" />
+    ),
     title: {
       en: "Implementation of network projects",
-      ar: "تنفيذ مشاريع الشبكات"
+      ar: "تنفيذ مشاريع الشبكات",
     },
     desc: {
       en: "From design, preparation of supplies and implementation",
-      ar: "من التصميم، تجهيز المستلزمات والتنفيذ"
+      ar: "من التصميم، تجهيز المستلزمات والتنفيذ",
     },
   },
   {
@@ -62,11 +64,11 @@ const ServiceData = [
     icon: <FaHandsHelping className="text-4xl md:text-5xl text-primary" />,
     title: {
       en: "Advice",
-      ar: "استشارات"
+      ar: "استشارات",
     },
     desc: {
       en: "In the field of physical components",
-      ar: "في مجال المكونات الفيزيائية"
+      ar: "في مجال المكونات الفيزيائية",
     },
   },
   {
@@ -74,11 +76,11 @@ const ServiceData = [
     icon: <LuHandHelping className="text-4xl md:text-5xl text-primary" />,
     title: {
       en: "Providing consultations",
-      ar: "تقديم الاستشارات"
+      ar: "تقديم الاستشارات",
     },
     desc: {
       en: "In the field of information technology and development of automated work systems",
-      ar: "في مجال تكنولوجيا المعلومات وتطوير أنظمة العمل المؤتمتة"
+      ar: "في مجال تكنولوجيا المعلومات وتطوير أنظمة العمل المؤتمتة",
     },
   },
 ];
@@ -89,7 +91,10 @@ const Service = () => {
   return (
     <div>
       <div className="container my-14 md:my-10">
-        <Heading title="Our Services" subtitle="Explore our services" />
+        <Heading
+          title={t("Heading.Our Services")}
+          subtitle={t("Subtitle.Explore our services")}
+        />
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8">
           {ServiceData.map((data, index) => (
             <div
@@ -99,10 +104,12 @@ const Service = () => {
               {data.icon}
               <div className="">
                 <h1 className="lg:text-xl font-bold">
-                  {i18n.language === "ar" ? data.title.ar : data.title.en} {/* التبديل بين العناوين */}
+                  {i18n.language === "ar" ? data.title.ar : data.title.en}{" "}
+                  {/* التبديل بين العناوين */}
                 </h1>
                 <h1 className="text-gray-400 text-sm">
-                  {i18n.language === "ar" ? data.desc.ar : data.desc.en} {/* التبديل بين الوصف */}
+                  {i18n.language === "ar" ? data.desc.ar : data.desc.en}{" "}
+                  {/* التبديل بين الوصف */}
                 </h1>
               </div>
             </div>

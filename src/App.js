@@ -16,6 +16,8 @@ import Application from "./components/Biogs/Application";
 import AllDataCenter from "./components/DataCenter/AllDataCenter";
 import UrPalm from "./components/Systems/UrPalm";
 import NationalBank from "./components/Systems/NationalBank";
+import Erp from "./components/Systems/Erp";
+import ScrollToTop from "./components/ScrollToTop";
 
 
 const App = () => {
@@ -38,6 +40,7 @@ const App = () => {
     >
       
       <BrowserRouter>
+      <ScrollToTop/>
       <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -45,6 +48,7 @@ const App = () => {
           <Route path="/alldatacenter" element={<AllDataCenter />} />
           <Route path="/urpalm" element={<UrPalm />} />
           <Route path="/nationalbank" element={<NationalBank />} />
+          <Route path="/ERP" element={<Erp />} />
           
         </Routes>
       </BrowserRouter>

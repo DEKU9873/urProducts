@@ -22,7 +22,7 @@ export default {
         },
 
         fontFamily: {
-          sans: ['Roboto', 'sans-serif'], // استبدل بـ 'Roboto' أو أي اسم خط آخر
+          sans: ['Cairo', 'sans-serif'], // إضافة Cairo كخط افتراضي
         },
       },
     },

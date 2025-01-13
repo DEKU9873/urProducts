@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Cairo', sans-serif;
 }
 
 @layer components {
@@ -16,10 +16,11 @@ body {
         dark:bg-gray-900 group-hover:dark:bg-gray-800;
   }
 }
+
+
 @layer utilities {
     .hero-bg-colo {
     @apply bg-gradient-to-r from-gray-300/80 to-gray-100
      dark:from-gray-900 dark:to-gray-800;
-        
   }
 }

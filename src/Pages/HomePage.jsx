@@ -12,6 +12,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AOS from "aos";
 import "aos/dist/aos.css"
 import DataCenter from "../components/DataCenter/DataCenter";
+import AboutUs from "../components/AboutUs/AboutUs";
+import ContactUs from "../components/ContactUs/ContactUs";
 
 const BannerData = {
   discount: "30% off",
@@ -55,9 +57,11 @@ const HomePage = () => {
         duration-200 overflow-hidden"
         >
           <Hero />
+          <AboutUs/>
           <Service />
           <Biogs />
           <DataCenter/>
+          <ContactUs/>
           <Partener />
         </div>
       );

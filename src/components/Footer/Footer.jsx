@@ -41,14 +41,14 @@ const Footer = () => {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae a
               accusantium illum
             </p>
-            <p className="text-gray-500 mt-4 mb-4">Made with ❤️ by URProduct</p>
+            <p className="text-gray-500 mt-4 mb-4">Made by URProduct</p>
             <a
               href=""
               target="_blank"
               className="inline-block bg-primary/90 text-white
             py-2 px-4 text-sm rounded-full"
             >
-              visit our youtbe channel
+              visit our website
             </a>
           </div>
 

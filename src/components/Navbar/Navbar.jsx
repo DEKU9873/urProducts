@@ -6,6 +6,9 @@ import { FaCaretDown } from "react-icons/fa";
 import { FaGlobe } from "react-icons/fa"; // استيراد أيقونة Globe
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next"; // استيراد useTranslation
+import TranslationIcon from "../Shared/TranslationIcon";
+
+import translationLogo from "../assets/translation.png";
 
 const Menulinks = [
   {
@@ -16,7 +19,7 @@ const Menulinks = [
   },
   {
     id: 2,
-    name: "About US",
+    name: "About Us",
     nameAr: "عن الشركة", // الترجمة العربية
     link: "/#About US",
   },
@@ -41,17 +44,25 @@ const Menulinks = [
 ];
 
 const DropdownLinks = [
+
   {
     id: 1,
-    name: "UR Palm",
-    nameAr: "نظام بصمة الشرايين اور", // الترجمة العربية
+    name: "National Bank for Obsolete Materials",
+    nameAr: "البنك الوطني للمواد الراكدة", // الترجمة العربية
+    link: "/nationalbank",
+  },
+
+  {
+    id: 2,
+    name: "UR Palm Solution",
+    nameAr: "نظام التحقق الحيوي اور", // الترجمة العربية
     link: "/urpalm",
   },
   {
-    id: 2,
-    name: "National Bank for Obsolete Materials",
-    nameAr: "البنك الوطني للمواد البالية", // الترجمة العربية
-    link: "/nationalbank",
+    id: 3,
+    name: "ERP System",
+    nameAr: "نظام ERP", // الترجمة العربية
+    link: "/ERP",
   },
 ];
 
@@ -91,11 +102,10 @@ const Navbar = () => {
                 <li key={index}>
                   <Link
                     to={data.link}
-                    className="inline-block px-4 font-semibold text-gray-500
-        hover:text-black dark:hover:text-white
-        duration-200" 
+                    className="inline-block px-4 font-semibold text-[17px] text-gray-500 hover:text-black dark:hover:text-white duration-200"
                   >
-                    {t(isArabic ? data.nameAr : data.name)} {/* استخدام الترجمة */}
+                    {t(isArabic ? data.nameAr : data.name)}{" "}
+                    {/* استخدام الترجمة */}
                   </Link>
                 </li>
               ))}
@@ -104,7 +114,7 @@ const Navbar = () => {
                 <a
                   href="#"
                   className="flex items-center gap-[2px] 
-                  font-semibold text-gray-500 dark:hover:text-white py-2"
+                  font-semibold text-gray-500 dark:hover:text-white py-2 text-[17px]"
                 >
                   {t(isArabic ? "أنظمة" : "Systems")} {/* استخدام الترجمة */}
                   <span>
@@ -129,7 +139,8 @@ const Navbar = () => {
                         w-full p-2 hover:bg-primary/20 rounded-md font-semibold"
                           to={data.link}
                         >
-                          {t(isArabic ? data.nameAr : data.name)} {/* استخدام الترجمة */}
+                          {t(isArabic ? data.nameAr : data.name)}{" "}
+                          {/* استخدام الترجمة */}
                         </Link>
                       </li>
                     ))}
@@ -140,12 +151,12 @@ const Navbar = () => {
           </div>
 
           {/* Translation Icon */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             <button
-              onClick={() => changeLanguage(isArabic ? "en" : "ar")} // التبديل بين اللغتين
-              className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-md hover:bg-gray-300 dark:hover:bg-gray-600"
+              onClick={() => changeLanguage(isArabic ? "en" : "ar")} 
+              className="px-4 py-2"
             >
-              <FaGlobe size={20} /> {/* أيقونة Globe */}
+              <img src={translationLogo} alt="Translation" className="w-10 invert dark:invert-0"/>
             </button>
 
             {/* Dark Mode Section */}

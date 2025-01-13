@@ -23,8 +23,8 @@ import Heading from '../Shared/Heading';
 const ApplicationData = [
   {
     id: 1,
-    dec: "Applications and programs for managing warehouses, supply and shipping operations, and GPS tracking of logistics services",
-    decAr: "التطبيقات والبرامج لإدارة المخازن، عمليات التوريد والشحن، وتتبع الخدمات اللوجستية عبر GPS",
+    dec: "GPS-Based logistics tracking applications",
+    decAr: " تطبيقات تتبع الخدمات اللوجستية عبر GPS",
     img: img1
   },
   {
@@ -41,8 +41,8 @@ const ApplicationData = [
   },
   {
     id: 4,
-    dec: "Applications and software for data security, cyber security, reputation management (ORM), data warehouses, business automation and data mining.",
-    decAr: "التطبيقات والبرامج لأمن البيانات، الأمن السيبراني، إدارة السمعة (ORM)، مستودعات البيانات، أتمتة الأعمال واستخراج البيانات.",
+    dec: "Cybersecurity and data/information security software systems.",
+    decAr: "برامجيات الامن السيبراني وامن البيانات والمعلومات.",
     img: img4
   },
   {
@@ -120,13 +120,13 @@ const ApplicationData = [
 ];
 
 const Application = () => {
-  const { t, i18n } = useTranslation(); // استخدام الترجمة
+  const { t, i18n } = useTranslation(); 
 
   return (
     <div className="mx-auto py-8 px-4">
       <Heading
-        title={t("Heading.Application and Software")} // الترجمة
-        subtitle={t("Subtitle.Explore our Application and Software")} // الترجمة
+        title={t("Heading.Application and Software")} 
+        subtitle={t("Subtitle.Explore our Application and Software")} 
       />
       <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {ApplicationData.map((app) => (
@@ -141,7 +141,7 @@ const Application = () => {
             />
             <div className="p-4">
               <p className="text-gray-700 dark:text-white text-justify text-sm">
-                {i18n.language === "ar" ? app.decAr : app.dec} {/* اختيار النص بناءً على اللغة */}
+                {i18n.language === "ar" ? app.decAr : app.dec} 
               </p>
             </div>
           </div>
