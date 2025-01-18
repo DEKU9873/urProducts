@@ -35,7 +35,7 @@ const DataCenter = () => {
   const { i18n, t } = useTranslation(); // استخدام useTranslation
 
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 flex flex-col items-center p-6">
+    <div id="datacenter" className="bg-gray-100 dark:bg-gray-900 flex flex-col items-center p-6 pt-20">
       <Heading
         title={t("Heading.Data Center Service")} // الترجمة
         subtitle={t("Subtitle.Explore our Data Center Services")} // الترجمة

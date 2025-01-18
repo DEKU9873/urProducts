@@ -18,6 +18,12 @@ import UrPalm from "./components/Systems/UrPalm";
 import NationalBank from "./components/Systems/NationalBank";
 import Erp from "./components/Systems/Erp";
 import ScrollToTop from "./components/ScrollToTop";
+import FirstApp from "./components/ApplicationDetails/FirstApp";
+import SecondApp from "./components/ApplicationDetails/SecondApp";
+import ThirdApp from "./components/ApplicationDetails/ThirdApp";
+import FourthApp from "./components/ApplicationDetails/FourthApp";
+import FifthApp from "./components/ApplicationDetails/FifthApp";
+import SixthApp from "./components/ApplicationDetails/SixthApp";
 
 
 const App = () => {
@@ -49,6 +55,16 @@ const App = () => {
           <Route path="/urpalm" element={<UrPalm />} />
           <Route path="/nationalbank" element={<NationalBank />} />
           <Route path="/ERP" element={<Erp />} />
+
+
+          <Route path="/firstapp" element={<FirstApp />} />
+          <Route path="/secondapp" element={<SecondApp />} />
+          <Route path="/thirdapp" element={<ThirdApp />} />
+          <Route path="/fourthapp" element={<FourthApp />} />
+          <Route path="/fifthapp" element={<FifthApp />} />
+          <Route path="/sixthapp" element={<SixthApp />} />
+
+          
           
         </Routes>
       </BrowserRouter>

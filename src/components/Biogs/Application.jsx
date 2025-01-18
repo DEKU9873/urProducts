@@ -59,8 +59,8 @@ const ApplicationData = [
   },
   {
     id: 7,
-    dec: "Applications and programs for e-government, one-stop shop",
-    decAr: "التطبيقات والبرامج للحكومة الإلكترونية، ونظام الشباك الواحد",
+    dec: "Applications and programs for e-government, and the single window system",
+    decAr: "التطبيقات والبرامج للحكومة الإلكترونية، ونظام النافذة الواحد",
     img: img7
   },
   {
@@ -84,7 +84,7 @@ const ApplicationData = [
   {
     id: 11,
     dec: "Applications and software for employee performance management, tracking, and performance analysis for institutions (ERP)",
-    decAr: "التطبيقات والبرامج لإدارة أداء الموظفين، وتتبعهم، وتحليل الأداء للمؤسسات (ERP)",
+    decAr: "التطبيقات والبرامج لإدارة أداء الموظفين، KPI وتحليل الأداء للمؤسسات (ERP)",
     img: img11
   },
   {

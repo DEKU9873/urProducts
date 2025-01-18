@@ -34,7 +34,8 @@ const DataCenterData = [
 const AboutUs = () => {
     const { i18n, t } = useTranslation(); 
   return (
-    <div className="  dark:bg-gray-900 flex flex-col items-center p-6">
+    <div id='about' className="dark:bg-gray-900 flex flex-col items-center p-6 pt-20">
+
     <Heading
       title={t("Heading.About US")} 
     />

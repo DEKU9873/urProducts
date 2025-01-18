@@ -89,7 +89,7 @@ const Service = () => {
   const { t, i18n } = useTranslation(); // استخدام useTranslation
 
   return (
-    <div>
+    <div id="service" className="pt-20" >
       <div className="container my-14 md:my-10">
         <Heading
           title={t("Heading.Our Services")}
