@@ -24,6 +24,16 @@ import ThirdApp from "./components/ApplicationDetails/ThirdApp";
 import FourthApp from "./components/ApplicationDetails/FourthApp";
 import FifthApp from "./components/ApplicationDetails/FifthApp";
 import SixthApp from "./components/ApplicationDetails/SixthApp";
+import SeventhApp from "./components/ApplicationDetails/SeventhApp";
+import EighthApp from "./components/ApplicationDetails/EighthApp";
+import NinthApp from "./components/ApplicationDetails/NinthApp";
+import TenthApp from "./components/ApplicationDetails/TenthApp";
+import EleventhApp from "./components/ApplicationDetails/EleventhApp";
+import TwelfthApp from "./components/ApplicationDetails/TwelfthApp";
+import ThirteenthApp from "./components/ApplicationDetails/ThirteenthApp";
+import ForteenthApp from "./components/ApplicationDetails/ForteenthApp";
+import FifteenthApp from "./components/ApplicationDetails/FifteenthApp";
+import SixteenthApp from "./components/ApplicationDetails/SixteenthApp";
 
 
 const App = () => {
@@ -63,6 +73,17 @@ const App = () => {
           <Route path="/fourthapp" element={<FourthApp />} />
           <Route path="/fifthapp" element={<FifthApp />} />
           <Route path="/sixthapp" element={<SixthApp />} />
+
+          <Route path="/seventhapp" element={<SeventhApp />} />
+          <Route path="/eighthapp" element={<EighthApp />} />
+          <Route path="/ninthapp" element={<NinthApp />} />
+          <Route path="/tenthapp" element={<TenthApp />} />
+          <Route path="/eleventhapp" element={<EleventhApp />} />
+          <Route path="/twelfthapp" element={<TwelfthApp />} />
+          <Route path="/thirteenthapp" element={<ThirteenthApp />} />
+          <Route path="/fourteenthapp" element={<ForteenthApp />} />
+          <Route path="/fifteenthapp" element={<FifteenthApp />} />
+          <Route path="/sixteenthapp" element={<SixteenthApp />} />
 
           
           

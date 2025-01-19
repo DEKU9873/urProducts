@@ -1,10 +1,10 @@
-
+import { FaNetworkWired, FaLock, FaMobileAlt, FaExclamationTriangle, FaRecycle, FaShieldAlt, FaCloud } from "react-icons/fa";
 import Heading from "../Shared/Heading";
 
 const FourthApp = () => {
   return (
     <div className="bg-gray-100 flex items-center justify-center p-4">
-      <div className="container bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="pt-4 bg-white shadow-lg rounded-lg overflow-hidden w-full">
         {/* Header Section */}
         <Heading
           title="برمجيات الأمن السيبراني وأمن البيانات والمعلومات"
@@ -12,83 +12,69 @@ const FourthApp = () => {
         />
 
         {/* Content Section */}
-        <div className="p-6 space-y-4 text-gray-700">
-          <p>
-            برمجيات الأمن السيبراني وأمن البيانات والمعلومات هي مجموعة من الحلول
-            التقنية المصممة لحماية الأنظمة، الشبكات، والبيانات من التهديدات
-            السيبرانية المتزايدة. تهدف هذه البرمجيات إلى تعزيز الأمان وحماية
-            المعلومات الحساسة من الوصول غير المصرح به، التلاعب، أو السرقة، وذلك
-            من خلال مجموعة متنوعة من الأدوات والتقنيات المتقدمة.
-          </p>
+        <div className="p-6 space-y-6 text-gray-700">
+          {/* أمن الشبكات */}
+          <div className="flex items-center space-x-4">
+            <FaNetworkWired className="text-blue-600 text-2xl" />
+            <div>
+              <h2 className="text-xl font-bold text-blue-600">أمن الشبكات</h2>
+              <p>حماية الشبكات باستخدام جدران الحماية وأنظمة الكشف عن الاختراق.</p>
+            </div>
+          </div>
 
-          <h2 className="text-xl font-bold text-blue-600">أمن الشبكات</h2>
-          <p>
-            برمجيات الأمن السيبراني توفر أدوات لحماية الشبكات من الهجمات مثل
-            البرمجيات الخبيثة، الفيروسات، والهجمات من نوع DDoS (هجمات الحرمان من
-            الخدمة الموزعة). تشمل هذه الأدوات جدران الحماية (Firewalls) التي
-            تقوم بفحص حركة المرور عبر الشبكة وتحديد ما إذا كانت البيانات مشروعة
-            أو ضارة. بالإضافة إلى أنظمة الاختراق المتقدمة (Intrusion Prevention
-            Systems - IPS) التي تكشف وتحجب محاولات الدخول غير المصرح بها.
-          </p>
+          {/* حماية البيانات */}
+          <div className="flex items-center space-x-4">
+            <FaLock className="text-blue-600 text-2xl" />
+            <div>
+              <h2 className="text-xl font-bold text-blue-600">حماية البيانات</h2>
+              <p>تشفير البيانات والتوثيق متعدد العوامل لضمان الأمان.</p>
+            </div>
+          </div>
 
-          <h2 className="text-xl font-bold text-blue-600">حماية البيانات</h2>
-          <p>
-            تعمل البرمجيات الخاصة بحماية البيانات على تشفير المعلومات الحساسة
-            وحمايتها أثناء نقلها وتخزينها. تستخدم تقنيات مثل التشفير والتوثيق
-            متعدد العوامل (MFA) لتوفير طبقات أمان إضافية. من بين هذه الأدوات
-            توجد برامج لإدارة الهوية والوصول (IAM) التي تضمن أن الأشخاص
-            المناسبين فقط هم من يمكنهم الوصول إلى البيانات والأنظمة الحساسة.
-          </p>
+          {/* أمن الأجهزة والمستخدمين */}
+          <div className="flex items-center space-x-4">
+            <FaMobileAlt className="text-blue-600 text-2xl" />
+            <div>
+              <h2 className="text-xl font-bold text-blue-600">أمن الأجهزة والمستخدمين</h2>
+              <p>حماية الأجهزة الفردية باستخدام برامج مكافحة الفيروسات وإدارة الأجهزة.</p>
+            </div>
+          </div>
 
-          <h2 className="text-xl font-bold text-blue-600">أمن الأجهزة والمستخدمين</h2>
-          <p>
-            برمجيات الأمان تقدم حماية للأجهزة الفردية مثل الحواسيب، الهواتف
-            الذكية، والخوادم ضد البرمجيات الخبيثة، الفيروسات، وبرامج التجسس.
-            تشمل هذه الحلول برامج مكافحة الفيروسات وبرامج مكافحة البرمجيات
-            الضارة (Malware). كما تستخدم أدوات إدارة الأجهزة المحمولة (MDM)
-            لتحديد السياسات الأمنية للأجهزة المحمولة المستخدمة في بيئة العمل.
-          </p>
+          {/* إدارة الحوادث والتهديدات */}
+          <div className="flex items-center space-x-4">
+            <FaExclamationTriangle className="text-blue-600 text-2xl" />
+            <div>
+              <h2 className="text-xl font-bold text-blue-600">إدارة الحوادث</h2>
+              <p>رصد وتحليل الحوادث الأمنية باستخدام نظم SIEM.</p>
+            </div>
+          </div>
 
-          <h2 className="text-xl font-bold text-blue-600">إدارة الحوادث والتهديدات</h2>
-          <p>
-            توفر برمجيات الأمن السيبراني أدوات لإدارة الحوادث الأمنية مثل نظم
-            إدارة الحوادث (SIEM) التي تراقب وتجمع البيانات من مختلف الأنظمة
-            لاكتشاف التهديدات وتحليلها. هذه الأدوات تساعد في تحديد التهديدات في
-            مراحل مبكرة، مما يقلل من الأضرار المحتملة.
-          </p>
+          {/* الاستجابة للطوارئ والتعافي */}
+          <div className="flex items-center space-x-4">
+            <FaRecycle className="text-blue-600 text-2xl" />
+            <div>
+              <h2 className="text-xl font-bold text-blue-600">التعافي من الكوارث</h2>
+              <p>استعادة البيانات بسرعة وتقليل وقت التوقف باستخدام أدوات النسخ الاحتياطي.</p>
+            </div>
+          </div>
 
-          <h2 className="text-xl font-bold text-blue-600">الاستجابة للطوارئ والتعافي</h2>
-          <p>
-            من خلال أدوات التعافي من الكوارث (Disaster Recovery) والنسخ
-            الاحتياطي، تضمن البرمجيات استعادة البيانات والنظام بعد حدوث هجوم
-            سيبراني أو كارثة تقنية. تساعد هذه الحلول الشركات في تقليل الفترات
-            الزمنية المفقودة وتحسين مرونة الأعمال في مواجهة التهديدات.
-          </p>
+          {/* أمن التطبيقات */}
+          <div className="flex items-center space-x-4">
+            <FaShieldAlt className="text-blue-600 text-2xl" />
+            <div>
+              <h2 className="text-xl font-bold text-blue-600">أمن التطبيقات</h2>
+              <p>اختبارات الأمان لتقليل الثغرات في التطبيقات البرمجية.</p>
+            </div>
+          </div>
 
-          <h2 className="text-xl font-bold text-blue-600">
-            التهديدات الموجهة والتسلل العميق
-          </h2>
-          <p>
-            تشمل البرمجيات المتقدمة تقنيات الذكاء الاصطناعي وتعلم الآلة لاكتشاف
-            التهديدات غير المعروفة أو الهجمات الموجهة (Advanced Persistent Threats
-            - APTs). هذه الأدوات قادرة على مراقبة الأنظمة بشكل مستمر وتحليل
-            الأنماط غير الطبيعية التي قد تشير إلى وجود هجوم سيبراني معقد.
-          </p>
-
-          <h2 className="text-xl font-bold text-blue-600">أمن التطبيقات</h2>
-          <p>
-            تتمثل إحدى الجوانب المهمة في أمن التطبيقات في استخدام برامج حماية
-            البرمجيات من الثغرات والعيوب البرمجية. تشمل هذه الحلول اختبارات
-            الاختراق (Penetration Testing) واختبار الأمن في مراحل التطوير لضمان
-            أن التطبيقات البرمجية لا تحتوي على ثغرات قد يستغلها المهاجمون.
-          </p>
-
-          <h2 className="text-xl font-bold text-blue-600">أدوات الأمان السحابية</h2>
-          <p>
-            تقوم البرمجيات السحابية بتوفير طبقات حماية إضافية للبيانات المخزنة
-            في السحابة. تشمل هذه الأدوات التشفير السحابي، إدارة الوصول، وأدوات
-            مراقبة النشاط لرصد العمليات المشبوهة وحمايتها من التهديدات المحتملة.
-          </p>
+          {/* أدوات الأمان السحابية */}
+          <div className="flex items-center space-x-4">
+            <FaCloud className="text-blue-600 text-2xl" />
+            <div>
+              <h2 className="text-xl font-bold text-blue-600">الأمان السحابي</h2>
+              <p>تأمين البيانات المخزنة في السحابة باستخدام التشفير والمراقبة.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

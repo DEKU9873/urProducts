@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next"; // استيراد useTranslation
 import img1 from "../assets/allaplication/1.jpg";
 import img2 from "../assets/allaplication/2.jpg";
@@ -25,97 +26,114 @@ const ApplicationData = [
     id: 1,
     dec: "GPS-Based logistics tracking applications",
     decAr: " تطبيقات تتبع الخدمات اللوجستية عبر GPS",
-    img: img1
+    img: img1,
+    link: "/firstapp",
   },
   {
     id: 2,
     dec: "Applications and programs for electronic payment operations of all kinds, subscriptions and payment lists",
     decAr: "التطبيقات والبرامج للعمليات الدفع الإلكتروني بجميع أنواعها، الاشتراكات وقوائم الدفع",
-    img: img2
+    img: img2,
+    link: "/secondapp",
   },
   {
     id: 3,
     dec: "Applications and programs for electronic marketing, order management, distribution, sales and e-commerce",
     decAr: "التطبيقات والبرامج للتسويق الإلكتروني، إدارة الطلبات، التوزيع، المبيعات والتجارة الإلكترونية",
-    img: img3
+    img: img3,
+    link: "/thirdapp",
   },
   {
     id: 4,
     dec: "Cybersecurity and data/information security software systems.",
     decAr: "برامجيات الامن السيبراني وامن البيانات والمعلومات.",
-    img: img4
+    img: img4,
+    link: "/fourthapp",
+  
   },
   {
     id: 5,
     dec: "Applications and programs for all transactions of the Ministry of Justice and the courts",
     decAr: "التطبيقات والبرامج لجميع معاملات وزارة العدل والمحاكم",
-    img: img5
+    img: img5,
+    link: "/fifthapp",
   },
   {
     id: 6,
     dec: "Applications and programs for centralized connectivity of parking lots, vehicle tracking and tracking, and port management.",
     decAr: "التطبيقات والبرامج للربط المركزي لمواقف السيارات، تتبع المركبات وإدارتها، وإدارة الموانئ.",
-    img: img6
+    img: img6,
+    link: "/sixthapp",
   },
   {
     id: 7,
     dec: "Applications and programs for e-government, and the single window system",
     decAr: "التطبيقات والبرامج للحكومة الإلكترونية، ونظام النافذة الواحد",
-    img: img7
+    img: img7,
+    link: "/seventhapp",
   },
   {
     id: 8,
     dec: "Applications and programs for financial and banking transactions, electronic wallet, production and extraction of digital currencies, and bank management",
     decAr: "التطبيقات والبرامج للمعاملات المالية والمصرفية، المحفظة الإلكترونية، إنتاج واستخراج العملات الرقمية، وإدارة البنوك",
-    img: img8
+    img: img8,
+    link: "/eighthapp",
   },
   {
     id: 9,
     dec: "Applications and software for property, real estate, asset, project, and investment management",
     decAr: "التطبيقات والبرامج لإدارة العقارات، العقارات، الأصول، المشاريع، والاستثمارات",
-    img: img9
+    img: img9,
+    link: "/ninthapp",
   },
   {
     id: 10,
     dec: "Applications and software for managing healthcare institutions of all types and related services",
     decAr: "التطبيقات والبرامج لإدارة مؤسسات الرعاية الصحية بأنواعها وخدماتها المتعلقة",
-    img: img10
+    img: img10,
+    link: "/tenthapp",
   },
   {
     id: 11,
     dec: "Applications and software for employee performance management, tracking, and performance analysis for institutions (ERP)",
     decAr: "التطبيقات والبرامج لإدارة أداء الموظفين، KPI وتحليل الأداء للمؤسسات (ERP)",
-    img: img11
+    img: img11,
+    link: "/erp",
   },
   {
     id: 12,
     dec: "General and specialized applications and software on all platforms (iOS, Android, PC)",
     decAr: "التطبيقات والبرامج العامة والمتخصصة على جميع المنصات (iOS، Android، PC)",
-    img: img12
+    img: img12,
+    link: "/twelfthapp",
   },
   {
     id: 13,
     dec: "Applications and software for surveillance cameras, radar systems, traffic management, and all related processes",
     decAr: "التطبيقات والبرامج لكاميرات المراقبة، أنظمة الرادار، إدارة المرور، وجميع العمليات المتعلقة",
-    img: img17
+    img: img17,
+    link: "/thirteenthapp",
   },
   {
     id: 14,
     dec: "Educational applications and software: e-learning systems, blended learning, and virtual labs",
     decAr: "التطبيقات والبرامج التعليمية: أنظمة التعلم الإلكتروني، التعلم المدمج، والمختبرات الافتراضية",
-    img: img14
+    img: img14,
+    link: "/fourteenthapp",
   },
   {
     id: 15,
     dec: "Applications and software for production processes, manufacturing, factory management, and industrial automation",
     decAr: "التطبيقات والبرامج لعمليات الإنتاج، التصنيع، إدارة المصانع، والأتمتة الصناعية",
-    img: img16
+    img: img16,
+    link: "/fifteenthapp",
   },
   {
     id: 16,
     dec: "Applications and software for governorates, municipal departments, and Baghdad Municipality services",
     decAr: "التطبيقات والبرامج للمحافظات، الإدارات البلدية، وخدمات بلدية بغداد",
-    img: img18
+    img: img18,
+    link: "/sixteenthapp",
   },
 ];
 
@@ -128,8 +146,11 @@ const Application = () => {
         title={t("Heading.Application and Software")} 
         subtitle={t("Subtitle.Explore our Application and Software")} 
       />
-      <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="mx-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {ApplicationData.map((app) => (
+          <Link
+          to={app.link}
+              className="bg-white dark:bg-gray-900">
           <div
             key={app.id}
             className="bg-white dark:bg-gray-600 shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
@@ -137,14 +158,16 @@ const Application = () => {
             <img
               src={app.img}
               alt="Application"
-              className="w-full h-48 object-cover"
+              className="w-full h-[220px] object-cover"
             />
             <div className="p-4">
-              <p className="text-gray-700 dark:text-white text-justify text-sm">
+              <p className="line-clamp-2 text-sm text-balck
+                    dark:text-gray-400">
                 {i18n.language === "ar" ? app.decAr : app.dec} 
               </p>
             </div>
           </div>
+          </Link>
         ))}
       </div>
     </div>

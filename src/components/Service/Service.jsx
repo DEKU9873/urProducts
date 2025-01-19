@@ -51,8 +51,8 @@ const ServiceData = [
       <MdOutlineNetworkWifi3Bar className="text-4xl md:text-5xl text-primary" />
     ),
     title: {
-      en: "Implementation of network projects",
-      ar: "تنفيذ مشاريع الشبكات",
+      en: "Implementation of communication network projects",
+      ar: "تنفيذ مشاريع شبكات الاتصالات",
     },
     desc: {
       en: "From design, preparation of supplies and implementation",

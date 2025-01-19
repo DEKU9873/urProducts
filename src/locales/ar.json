@@ -6,7 +6,7 @@
     "About US": "عن الشركة",
     "Our Services": "خدماتنا",
     "Application and Software": "التطبيقات والبرامج",
-    "Data Center Service": "خدمات مركز البيانات",
+    "Data Center Service": " مراكز البيانات",
     "Systems": "النظم",
     "UR Palm": "نظام بصمة الشرايين اور",
     "National Bank for Obsolete Materials": "البنك الوطني للمواد الراكدة",
@@ -112,10 +112,10 @@
     "Quick Links": "روابط سريعة",
     "Address": "العنوان",
     "Address Details": "العراق، بغداد، الكرادة/شارع الصناعة"
-  }
-
-
-    
+  },
+  "Button": { 
+    "View More": "اظهار المزيد"
+  } 
     
   }
   

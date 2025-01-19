@@ -67,7 +67,7 @@ const Biogs = () => {
   const { t, i18n } = useTranslation(); 
   return (
     <div id="application" className="my-12">
-      <div className="container pt-20">
+      <div className="mx-4 pt-20">
         {/* Header section */}
         <Heading
           title={t("Heading.Application and Software")} 
@@ -116,7 +116,7 @@ const Biogs = () => {
         <div className="flex justify-center items-center text-center mt-8">
           <Link to="/allaplication">
             <div className="flex justify-center items-center px-8 py-3 w-[200px] bg-primary text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer">
-              {t("View More")}
+              {t("Button.View More")}
             </div>
           </Link>
         </div>

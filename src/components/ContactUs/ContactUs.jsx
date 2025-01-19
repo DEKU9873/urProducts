@@ -26,7 +26,7 @@ const ContactUs = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // منع السلوك الافتراضي للفورم
     try {
-      const response = await axios.post("http://192.168.100.180:8000/api/send-email/", formData);
+      const response = await axios.post("http://127.0.0.1:8000/api/send-email/", formData);
       if (response.status === 200) {
         setStatus("success");
         // تفريغ الحقول بعد الإرسال
@@ -39,8 +39,10 @@ const ContactUs = () => {
 
   return (
     <div id="contact" className="py-12 bg-gray-50 dark:bg-gray-800 pt-20">
-      <div className="container mx-auto px-4">
+      <div className=" mx-auto px-4">
+        <div className="mt-2">
         <Heading title={t("Heading.Contact Us")} />
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Map Section */}

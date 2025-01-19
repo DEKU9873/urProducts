@@ -1,56 +1,65 @@
 import React from "react";
+import { FaCreditCard, FaWallet, FaUniversity, FaMobileAlt, FaShieldAlt, FaSmile, FaListAlt } from "react-icons/fa";
 import Heading from "../Shared/Heading";
 
 const SecondApp = () => {
   return (
     <div className="bg-gray-100 flex items-center justify-center p-4">
-      <div className="container bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="pt-4 bg-white shadow-lg rounded-lg overflow-hidden w-full">
         {/* Header Section */}
         <Heading
-          title="التطبيقات والبرامج للعمليات الدفع الإلكتروني بجميع أنواعها"
+          title="التطبيقات والبرامج للعمليات الدفع الإلكتروني"
           subtitle="الاشتراكات وقوائم الدفع"
         />
 
         {/* Content Section */}
         <div className="p-6 space-y-4 text-gray-700">
           <p>
-            تعتبر التطبيقات والبرامج الخاصة بحلول الدفع الإلكتروني أدوات أساسية
-            لتمكين الأفراد والشركات من إدارة المعاملات المالية بكفاءة وأمان.
-            توفر هذه الحلول منصات آمنة لمعالجة جميع أنواع المدفوعات، بما في ذلك
-            عمليات الشراء عبر الإنترنت، وإدارة الاشتراكات، وإنشاء قوائم دفع
-            للفواتير الدورية.
+            تطبيقات الدفع الإلكتروني تُسهّل إدارة المعاملات المالية بأمان وكفاءة.
           </p>
 
           <h2 className="text-xl font-bold text-blue-600">طرق الدفع المدعومة</h2>
           <ul className="list-disc list-inside space-y-2">
-            <li>البطاقات الائتمانية</li>
-            <li>المحافظ الرقمية</li>
-            <li>التحويلات البنكية</li>
-            <li>الدفع عبر الهواتف المحمولة</li>
+            <li>
+              <FaCreditCard className="inline text-blue-500 mr-2" />
+              البطاقات الائتمانية
+            </li>
+            <li>
+              <FaWallet className="inline text-blue-500 mr-2" />
+              المحافظ الرقمية
+            </li>
+            <li>
+              <FaUniversity className="inline text-blue-500 mr-2" />
+              التحويلات البنكية
+            </li>
+            <li>
+              <FaMobileAlt className="inline text-blue-500 mr-2" />
+              الدفع عبر الهواتف المحمولة
+            </li>
           </ul>
-
-          <p>
-            كما تتضمن ميزات مثل التذكير التلقائي بالمدفوعات، وتجديد الاشتراكات،
-            وتقديم تقارير تفصيلية تساعد المستخدمين على تتبع أنشطتهم المالية
-            وتحسين إدارة التدفق النقدي.
-          </p>
 
           <h2 className="text-xl font-bold text-blue-600">الفوائد</h2>
           <ul className="list-disc list-inside space-y-2">
-            <li>تنفيذ المعاملات بشكل آمن من خلال أنظمة التشفير وكشف الاحتيال</li>
-            <li>توفير تجربة دفع مريحة وسلسة للعملاء</li>
             <li>
-              إمكانية إدارة أنواع مختلفة من الاشتراكات مثل العضويات الشهرية أو
-              خدمات البرمجيات كخدمة (SaaS)
+              <FaShieldAlt className="inline text-green-500 mr-2" />
+              معاملات آمنة بتقنيات التشفير وكشف الاحتيال
             </li>
-            <li>إنشاء قوائم دفع لإدارة المدفوعات المتكررة</li>
+            <li>
+              <FaSmile className="inline text-green-500 mr-2" />
+              تجربة دفع مريحة وسلسة
+            </li>
+            <li>
+              <FaListAlt className="inline text-green-500 mr-2" />
+              إدارة الاشتراكات والعضويات الشهرية بسهولة
+            </li>
+            <li>
+              <FaListAlt className="inline text-green-500 mr-2" />
+              إنشاء قوائم دفع للمدفوعات المتكررة
+            </li>
           </ul>
 
           <p>
-            يساعد اعتماد هذه التطبيقات في تقليل المهام اليدوية، وتجنب فوات
-            مواعيد المدفوعات، وتحسين رضا العملاء. كما يمكن دمج هذه البرامج مع
-            أدوات المحاسبة وأنظمة إدارة علاقات العملاء (CRM) لتقديم تجربة شاملة
-            في إدارة الشؤون المالية.
+            تساعد هذه التطبيقات على تحسين إدارة التدفق النقدي، تقليل المهام اليدوية، وتجنب تأخير المدفوعات. كما يمكن دمجها مع أنظمة المحاسبة وأدوات CRM.
           </p>
         </div>
       </div>

@@ -36,10 +36,12 @@ const DataCenter = () => {
 
   return (
     <div id="datacenter" className="bg-gray-100 dark:bg-gray-900 flex flex-col items-center p-6 pt-20">
+      <div className="mt-4">
       <Heading
         title={t("Heading.Data Center Service")} // الترجمة
         subtitle={t("Subtitle.Explore our Data Center Services")} // الترجمة
       />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {DataCenterData.map((item) => (
           <div
@@ -63,7 +65,7 @@ const DataCenter = () => {
       <Link to={"/alldatacenter"}>
         <div className="flex justify-center items-center text-center mt-8">
           <div className="flex justify-center items-center px-8 py-3 w-[200px] bg-primary text-white text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer">
-            {t("View More")} {/* الترجمة */}
+          {t("Button.View More")} {/* الترجمة */}
           </div>
         </div>
       </Link>

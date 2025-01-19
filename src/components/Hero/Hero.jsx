@@ -52,7 +52,7 @@ const Hero = () => {
   };
 
   return (
-    <div id="home" className="container pt-2">
+    <div id="/" className="mx-3 pt-2">
       <div
         className="overflow-hidden rounded-3xl min-h-[550px]
       sm:min-h-[650px] hero-bg-colo flex justify-center

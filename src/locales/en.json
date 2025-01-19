@@ -6,7 +6,7 @@
     "About US": "About Us",
     "Our Services": "Our Services",
     "Application and Software": "Application and Software",
-    "Data Center Service": "Data Center Service",
+    "Data Center Service": "Data Center",
     "Systems": "Systems",
     "UR Palm": "UR Palm",
     "National Bank for Obsolete Materials": "National Bank of Obsolete Materials",
@@ -110,6 +110,8 @@
     "Quick Links": "Quick Links",
     "Address": "Address",
     "Address Details": "Iraq, Baghdad, Karadda/alsina'a street"
+  },
+  "Button": { 
+    "View More": "View More"
   }
-
 }
